@@ -1,0 +1,73 @@
+@import url("reset.css");
+
+h1 {
+  color: red;
+}
+
+.title {
+  color: blue;
+}
+
+/* !Звернення до таких селекторів в коді (оптимізація коду)*/
+.seo-text,
+.team-text {
+  color: green;
+}
+
+.tips-list li {
+  color: orange;
+}
+
+.tips-title {
+  color: orchid;
+}
+
+.entry-box > p {
+  color: green;
+}
+
+.entry-box .link {
+  color: red;
+}
+
+/* !одночасне зверенння до тегу з 2 класами (без пробілу!!!!)*/
+
+.box-1.box-2 {
+  color: cornflowerblue;
+}
+
+/* !Використання + і ~ разом, Лише в такій послідовності, інакше ~ перебиває + */
+
+.entry-box ~ .box-text {
+  color: blueviolet;
+}
+
+.entry-box + .box-text {
+  color: aquamarine;
+}
+
+.info-box * {
+  color: pink;
+}
+
+.info-wrap p {
+  color: darkolivegreen;
+}
+
+/* !конкретизація div  лише з таким класом */
+div.footer-box-2 {
+  color: chartreuse;
+}
+
+/*  !селектор  id */
+#item-3 {
+  color: yellowgreen;
+}
+
+/* !Селектор атрибуту */
+
+/* ?Перебив задане вище значення color: green; так як стилі знаходяться нище в потоку,
+? селектор класу і селектор атрибуту рівнозначні */
+[class*="seo"] {
+  color: orangered;
+}
