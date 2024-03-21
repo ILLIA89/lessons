@@ -1,0 +1,364 @@
+/* !Локальне підключення */
+@import url("fonts.css");
+
+@import url("reset.css");
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  /* !це стандартні параметри браузера за замовчуванням,
+   !body їх можна не прописувати */
+  /* font-weight: 400;
+  font-size: 16px; */
+}
+
+.page-header {
+  padding-bottom: 100px;
+}
+
+.box-text {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.box-text h1 {
+  font-size: 40px;
+  font-style: oblique;
+  color: red;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.box-text h1 ~ p {
+  /* !після  h1 до всіх елементів застосувати */
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  color: blue;
+  text-align: right;
+
+  margin-bottom: 15px;
+}
+
+.box-text h1 + p {
+  font-family: "Kyiv Region";
+  font-size: 25px;
+  color: green;
+  text-align: left;
+}
+
+.wrap-text-first {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wrap-text-first > h2 {
+  font-size: 40px;
+  font-style: italic;
+  color: #ff440061;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.wrap-text-first h2 + p {
+  margin-bottom: 15px;
+}
+
+.wrap-text-first > p {
+  color: rgba(55, 168, 51, 0.5);
+  font-size: 25px;
+  text-align: center;
+}
+
+.wrap-text-next {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrap-text-next h2 {
+  font-size: 40px;
+  color: green;
+  /* !так має бути тут не центрую заголовки */
+  text-align: justify;
+
+  margin-bottom: 15px;
+}
+
+.wrap-text-next {
+  font-size: 25px;
+  padding-bottom: 100px;
+}
+
+.wrap-text-next h2 ~ p {
+  margin-bottom: 15px;
+}
+
+.error-real-1 {
+  color: blueviolet;
+  text-decoration: underline;
+  text-decoration-color: cadetblue;
+  text-decoration-style: dashed;
+  /* text-decoration-line: line-through; */
+}
+
+.error-real-2 {
+  color: brown;
+  text-decoration: line-through;
+  text-decoration-color: black;
+  text-decoration-style: double;
+}
+
+.error-real-3 {
+  color: goldenrod;
+  text-decoration: overline;
+  text-decoration-color: blue;
+  text-decoration-style: wavy;
+}
+
+.wrap-text-next > .title-first {
+  color: yellow;
+  text-shadow: 6px 5px 3px blue;
+}
+
+.wrap-text-next > .title-second {
+  color: blue;
+  text-shadow: 2px 2px 5px #000, 5px -2px 10px red;
+}
+
+.wrap-text-end {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.wrap-text-end > .error-1 {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.3px;
+  line-height: 2;
+  color: green;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.wrap-text-end > .error-2 {
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2;
+  /* !white-space дозволяє контролювати,
+  !як пробіли та розриви рядків в тексті відображаються на веб-сторінці.*/
+  /* white-space: nowrap; */
+
+  color: olivedrab;
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.wrap-text-end > .error-3 {
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1.3px;
+  color: greenyellow;
+  text-align: left;
+  text-transform: capitalize;
+  word-spacing: 20px;
+}
+
+/* !Тимчасова конструкція побудови сітки елементів */
+
+.wrap-li-box {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.li-box {
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 0;
+}
+
+.li-item {
+  font-size: 30px;
+  width: 15%;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content-li {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background-color: brown;
+}
+
+.none {
+  /* ?вилучає елемент з потоку, інші елементи займають його місце */
+  display: none;
+}
+
+.main {
+  padding-bottom: 100px;
+}
+
+/* ! Так як ми вчимось і не знаходимось в реальних умовах
+ !завдання 4 і 5 буду верстати у футері */
+
+.layout-wrap {
+  /* ?стилі за замовченням (які наслідуються від браузера) писати не потрібно*/
+  /* font-weight: 400;
+  font-size: 16px; */
+  line-height: 1.9;
+  letter-spacing: 0;
+  color: #2b2929;
+}
+
+.text-title {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  color: #2b2929;
+  margin-bottom: 30px;
+}
+
+.text-block-1 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.text-block-2 {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.text-block-2 .text-title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.text-block-2 > img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.text-block-2 img + p {
+  margin-bottom: 40px;
+}
+
+.extra-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #2b2929;
+  margin-bottom: 30px;
+}
+
+.text-block-list li {
+  margin-bottom: 20px;
+}
+
+.text-block-list {
+  margin-bottom: 40px;
+}
+
+/* !KROVATO */
+
+.text-block-3 {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f8f8f8;
+}
+
+.text-block-3 > .text-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text-block-3 > .text-title span {
+  text-transform: uppercase;
+}
+
+.krovato-about-list {
+  font-size: 0;
+}
+
+.krovato-wrap-list {
+  display: inline-block;
+  max-width: 25%;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+
+.krovato-wrap-list img {
+  max-width: 170px;
+  margin-bottom: 20px;
+}
+
+.krovato-wrap-list .extra-title {
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.krovato-wrap-list .extra-title + p {
+  text-align: center;
+}
+
+/* ?EcommerceMinimal */
+
+.text-block-4 {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+  background-color: #e3e3e3;
+}
+
+.product-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+
+  margin-bottom: 60px;
+}
+
+.product-item > img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.product-wrap {
+  text-align: center;
+}
+
+.product-item {
+  display: inline-block;
+  max-width: 15%;
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: top;
+}
