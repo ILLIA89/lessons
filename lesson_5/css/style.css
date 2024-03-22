@@ -310,7 +310,8 @@ body {
 }
 
 .krovato-wrap-list img {
-  max-width: 170px;
+  display: inline-block;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
@@ -347,8 +348,8 @@ body {
 }
 
 .product-item > img {
-  width: 100%;
-  max-width: 200px;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .product-wrap {
