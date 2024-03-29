@@ -1,0 +1,668 @@
+/* !Локальне підключення */
+@import url("fonts.css");
+
+@import url("reset.css");
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  /* !це стандартні параметри браузера за замовчуванням,
+   !body їх можна не прописувати */
+  /* font-weight: 400;
+  font-size: 16px; */
+  background-image: url(/img/repeat.jpg);
+  /* ?скролиться або не скролиться, фонове зображення, разом з блоком */
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+}
+
+.page-header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main {
+  padding-bottom: 100px;
+}
+
+.page-header,
+main {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(
+    90deg,
+    rgba(59, 215, 121, 0.49625787815126055) 50%,
+    rgba(3, 204, 245, 0.49625787815126055) 100%
+  );
+}
+
+.box-text {
+  width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 10px solid rgb(157, 109, 204);
+  outline: 15px solid yellowgreen;
+  background-image: linear-gradient(
+    90deg,
+    rgba(252, 190, 0, 1) 50%,
+    rgba(151, 255, 0, 1) 100%
+  );
+}
+
+.box-text h1 {
+  font-size: 40px;
+  font-style: oblique;
+  color: red;
+  text-align: center;
+
+  margin-bottom: 15px;
+  border: 8px dotted rgb(201, 50, 50);
+}
+
+.box-text h1 ~ p {
+  /* !після  h1 до всіх елементів застосувати */
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  color: blue;
+  text-align: right;
+
+  margin-bottom: 15px;
+  border: 5px dashed rgb(171, 238, 2);
+}
+
+.box-text h1 + p {
+  font-family: "Kyiv Region";
+  font-size: 25px;
+  color: green;
+  text-align: left;
+  border: 8px double rgb(36, 40, 25);
+  border-bottom: none;
+}
+
+/* ?Наступний блок */
+
+.bg-wrap {
+  background-image: url("https://cs11.pikabu.ru/post_img/big/2020/05/12/9/1589296666113294753.jpg ");
+  background-repeat: no-repeat;
+  /* ?cover — масштабує зображення так,
+  ?щоб воно зайняло увесь блок (якщо в блоці не буде контенту то ми не побачимо фонове зображення).
+  ?Тобто по найбільшій частині картинки.  */
+  background-size: cover;
+}
+
+.wrap-text-first {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(206, 240, 138);
+
+  background-image: url("https://cs11.pikabu.ru/post_img/big/2020/05/12/9/1589296666113294753.jpg ");
+  background-repeat: no-repeat;
+  /* ?Перше значення  — ширина, друге — висота (значення можуть бути у відсотках, px). */
+  /* background-size: 300px 100px; */
+  /* background-size: auto 100px; */
+  /* !спеціальні значення */
+  /* ?contain — масштабує зображення таким чином, щоб картинка повністю помістилася всередину блоку.
+  ?Тобто по найменшій частині картинки (висота, якщо зображення горизонтальне, або ширина).
+  ?Підходить для фотографій та карток товарів. */
+  background-size: contain;
+
+  background-position: center;
+
+  border-top: 10px solid rgb(157, 109, 204);
+  border-right: 10px dotted rgb(109, 196, 204);
+  border-bottom: 10px double rgb(3, 167, 11);
+  border-left: 10px dashed rgb(247, 143, 8);
+}
+
+.wrap-text-first > h2 {
+  font-size: 40px;
+  font-style: italic;
+  color: #ff440061;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.wrap-text-first h2 + p {
+  margin-bottom: 15px;
+}
+
+.wrap-text-first > p {
+  /* color: rgba(55, 168, 51, 0.5); */
+  opacity: 0;
+  font-size: 25px;
+  text-align: center;
+}
+
+.wrap-text-next {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrap-text-next h2 {
+  font-size: 40px;
+  color: green;
+  /* !так має бути тут не центрую заголовки */
+  text-align: justify;
+
+  margin-bottom: 15px;
+}
+
+/* ?Наступний блок */
+
+.wrap-text-next {
+  margin-bottom: 100px;
+  font-size: 25px;
+  padding: 100px;
+  background-color: #e3e3e3;
+  border-radius: 25px;
+  background-image: url("../img/icon.png"),
+    radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(247, 0, 50, 1) 100%);
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-x; */
+  /* background-repeat: repeat-y; */
+  /* !перше значення — розташування по горизонталі 
+  !(значення може бути у відсотках, px, словом),
+  ! друге значення — по вертикалі. */
+  background-position: right 50%;
+}
+
+.title-first {
+  opacity: 0;
+}
+
+.title-second {
+  opacity: 1;
+}
+
+.title-end {
+  opacity: 0.5;
+}
+
+.wrap-text-next h2 ~ p {
+  margin-bottom: 15px;
+}
+
+.error-real-1 {
+  color: blueviolet;
+  text-decoration: underline;
+  text-decoration-color: cadetblue;
+  text-decoration-style: dashed;
+  /* text-decoration-line: line-through; */
+
+  visibility: hidden;
+}
+
+.error-real-2 {
+  color: brown;
+  text-decoration: line-through;
+  text-decoration-color: black;
+  text-decoration-style: double;
+}
+
+.error-real-3 {
+  color: goldenrod;
+  text-decoration: overline;
+  text-decoration-color: blue;
+  text-decoration-style: wavy;
+}
+
+.wrap-text-next > .title-first {
+  color: yellow;
+  text-shadow: 6px 5px 3px blue;
+}
+
+.wrap-text-next > .title-second {
+  color: blue;
+  text-shadow: 2px 2px 5px #000, 5px -2px 10px red;
+}
+
+/* ?Наступний блок */
+.wrap-text-end {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 50px;
+
+  border: 4px solid rgb(143, 6, 97);
+  border-radius: 5%;
+  /* ?зовнішня тінь */
+  box-shadow: 0px 0px 23px 11px rgba(143, 6, 98, 1);
+
+  background-image: linear-gradient(
+    0deg,
+    rgba(34, 34, 195, 1) 0%,
+    rgba(253, 107, 45, 1) 100%
+  );
+}
+
+.wrap-text-end > .error-1 {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.3px;
+  line-height: 2;
+  color: whitesmoke;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.wrap-text-end > .error-2 {
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2;
+  /* !white-space дозволяє контролювати,
+  !як пробіли та розриви рядків в тексті відображаються на веб-сторінці.*/
+  /* white-space: nowrap; */
+
+  color: wheat;
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.wrap-text-end > .error-3 {
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1.3px;
+  color: greenyellow;
+  text-align: left;
+  text-transform: capitalize;
+  word-spacing: 20px;
+}
+
+/* !Тимчасова конструкція побудови сітки елементів */
+
+.wrap-li-box {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.li-box {
+  margin: 50px -5px;
+  font-size: 0;
+
+  /* margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: 50px;
+  margin-top: 50px; */
+}
+
+.li-item {
+  display: inline-block;
+  width: 100%;
+  max-width: 15%;
+  margin-right: 10px;
+
+  font-size: 30px;
+
+  vertical-align: top;
+}
+
+.content-li {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  background-color: #cf1212;
+  border-radius: 50%;
+
+  /* !не розумію чому обрізається верхня тінь?
+  ! Коли задаю плюсове значення все ок. Після того як додав верхній margin
+  ! на  .li-box все запрацювало. Чи можна використовувати подібні рішення?
+  !при паддінгу у мене диформувався контент */
+
+  box-shadow: 0px -25px 20px -4px rgba(0, 0, 0, 1),
+    inset 0px 0px 20px -4px rgba(0, 0, 0, 1);
+}
+
+/*  !забіг трішки наперед*/
+
+li:first-child > .content-li {
+  background-color: #cf1212;
+  border-radius: 30% 70% 70% 30% / 42% 52% 48% 58%;
+  /* ?внутрішня тінь */
+  box-shadow: inset 0px 0px 23px 11px rgba(0, 0, 0, 0.43);
+}
+
+.none {
+  /* ?вилучає елемент з потоку, інші елементи займають його місце */
+  display: none;
+}
+
+.wrap-li-box > img {
+  max-width: 700px;
+  border-radius: 30% 70% 70% 30% / 42% 52% 48% 58%;
+  /* border-radius: 16% 84% 8% 92% / 65% 59% 41% 35%; */
+  background-size: contain;
+}
+
+.bg-practic {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ! Так як ми вчимось і не знаходимось в реальних умовах
+ !завдання 4 і 5 буду верстати у футері */
+
+footer {
+  background-color: rgb(255, 255, 255);
+}
+
+/* ?..............................................Оформлення вітальні............................................. */
+
+.layout-wrap {
+  /* ?стилі за замовченням (які наслідуються від браузера) писати не потрібно*/
+  /* font-weight: 400;
+  font-size: 16px; */
+  line-height: 1.9;
+  letter-spacing: 0;
+  color: #2b2929;
+}
+
+.text-title {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  color: #2b2929;
+  margin-bottom: 30px;
+}
+
+.text-block-1 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.text-block-2 {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.text-block-2 .text-title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.text-block-2 > img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.text-block-2 img + p {
+  margin-bottom: 40px;
+}
+
+.extra-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #2b2929;
+  margin-bottom: 30px;
+}
+
+/* !---СТИЛІЗАЦІЯ МАРКОВАНОГО СПИСКУ---*/
+.text-block-list li {
+  margin-bottom: 20px;
+  padding-left: 47px;
+  background: url("../img/mark.png") 0 0 / 32px no-repeat;
+  /* !Якщо зображення списку обрізається, спробуй встановити min-height потрібно підганяти під картинку*/
+  min-height: 30px;
+}
+
+.text-block-list {
+  margin-bottom: 40px;
+}
+
+/* ?................................KROVATO............................. */
+
+.text-block-3-wrap {
+  background-color: #f8f8f8;
+}
+
+.text-block-3 {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.text-block-3 > .text-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text-block-3 > .text-title span {
+  text-transform: uppercase;
+}
+
+.krovato-about-list {
+  font-size: 0;
+}
+
+.krovato-wrap-list {
+  display: inline-block;
+  /* ?Це рекомендація, додати ще width 100% додатково,
+  ?зараз карточки до max-width розтягує текст, 
+  ?але якщо тексту буде менше нічому буде розтягувати, 
+  ?а width 100% скаже щоб карточка завжди була ці 25%
+  ?ширини незалежно від того скільки всередині неї контенту.*/
+  width: 100%;
+  max-width: 25%;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+
+.krovato-wrap-list img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.krovato-wrap-list .extra-title {
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.krovato-wrap-list .extra-title + p {
+  text-align: center;
+}
+
+/* ?............................................EcommerceMinimal..........................................*/
+
+.ecommerce-minimal {
+  font-family: "Roboto", sans-serif;
+}
+.colections {
+  font-family: "Roboto", sans-serif;
+  padding-top: 54px;
+  padding-bottom: 54px;
+
+  background: url("../img/vector-left.png") no-repeat 0 90% / 132px,
+    url("../img/vector-righte.png") no-repeat 100% 45% / 194px,
+    rgba(30, 40, 50, 0.05);
+
+  /* outline: 1px solid #cf1212; */
+}
+
+.colections-container {
+  max-width: 1250px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0 auto;
+}
+
+.text-wrap-colections {
+  display: inline-block;
+  max-width: 686px;
+  margin-right: 98px;
+  padding-top: 74px;
+
+  /* outline: 1px solid #0207f8; */
+}
+
+.img-wrap-eco {
+  display: inline-block;
+  vertical-align: top;
+
+  max-width: 442px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  border-radius: 160px 0;
+}
+
+/* !ефект тіні за фотографією */
+.img-wrap-eco > img {
+  width: 100%;
+  margin: -10px 8px 20px -18px;
+
+  border-radius: 160px 0;
+}
+
+.text-wrap-colections > h2 {
+  margin-bottom: 52px;
+
+  font-weight: 300;
+  font-size: 74px;
+  line-height: 74%;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.text-wrap-colections > h2 + p {
+  font-size: 30px;
+  line-height: 183%;
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 66px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 29px;
+  text-transform: capitalize;
+  padding: 25px 28px 22px 64px;
+
+  color: white;
+
+  background: #1e2832 url("../img/shop-now.png") no-repeat 10% / 30px;
+}
+
+.wrap-ecommerce {
+  background-color: #e3e3e3;
+}
+
+.text-block-4 {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+}
+
+.product-title {
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+
+  margin-bottom: 60px;
+}
+
+.product-item > img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.product-wrap {
+  text-align: center;
+}
+
+.product-item {
+  display: inline-block;
+  max-width: 15%;
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: top;
+}
+
+/* !.......................................EduPlay.......................................................... */
+
+.edu {
+  font-family: "Quicksand", sans-serif;
+  background: url("../img/holographic-img.png") no-repeat 0 0 / 100% 100%,
+    url("../img/holographic.png") no-repeat 0 0 / 100% 100%;
+  border: 1px solid #000;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  padding-bottom: 37px;
+}
+
+.edu-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.edu-container > img {
+  display: inline-block;
+  min-width: 547px;
+}
+
+.edu-text {
+  display: inline-block;
+  max-width: 600px;
+  margin-right: 133px;
+  padding: 121px 0;
+}
+
+.edu-text > h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #fff;
+
+  margin-bottom: 24px;
+}
+
+.edu-text h2 + p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  color: #fff;
+
+  margin-bottom: 24px;
+}
+
+.edu-btn {
+  min-width: 217px;
+  padding: 12px 20px;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 156.25%;
+  color: #0d1216;
+
+  border-radius: 8px;
+  background-color: #fff;
+  border: transparent;
+}
