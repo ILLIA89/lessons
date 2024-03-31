@@ -654,7 +654,7 @@ footer {
 
 .edu-btn {
   min-width: 217px;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 37px;
 
   text-align: center;
   font-weight: 700;
@@ -663,6 +663,7 @@ footer {
   color: #0d1216;
 
   border-radius: 8px;
-  background-color: #fff;
   border: transparent;
+
+  background: url("../img/button-label.png") 8% 50% / 17px no-repeat, #fff;
 }
