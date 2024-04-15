@@ -1,0 +1,155 @@
+@import url("fonts.css");
+@import url("style.css");
+@import url("reset.css");
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  /* !це стандартні параметри браузера за замовчуванням,
+   !body їх можна не прописувати */
+  /* font-weight: 400;
+  font-size: 16px; */
+  /* background-image: url(img/repeat.jpg); */
+  /* background-repeat: repeat-x; */
+  background: linear-gradient(
+      90deg,
+      rgba(59, 215, 121, 0.49625787815126055) 50%,
+      rgba(3, 204, 245, 0.49625787815126055) 100%
+    ),
+    url("../img/repeat.jpg") repeat;
+  /* ?скролиться або не скролиться, фонове зображення, разом з блоком */
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+}
+
+header h1 {
+  margin-bottom: 25px;
+  padding: 25px;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(252, 143, 1);
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.game-line {
+  background-color: aqua;
+}
+
+.game {
+  min-height: 1000px;
+  padding: 25px;
+  font-size: 0;
+  background: radial-gradient(
+    circle,
+    rgba(168, 168, 168, 1) 50%,
+    rgba(121, 121, 121, 1) 100%
+  );
+}
+
+.game-line-1 {
+  height: 50px;
+  width: 50px;
+}
+
+.game-line-2 {
+  height: 50px;
+  width: 50px;
+}
+.game-line-1:hover + .game-line-2,
+.game-line-2:hover {
+  width: 75%;
+}
+
+.game-line-3 {
+  /* !двигаємо шириною */
+  display: inline-block;
+  height: 50px;
+  width: 970px;
+}
+
+.game-line-3-1 {
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.game-line-2:hover ~ .game-line-3-1,
+.game-line-3-1:hover {
+  display: inline-block;
+  visibility: visible;
+}
+
+.game-line-3-1:hover {
+  height: 100px;
+}
+
+.game-line-4-1 {
+  display: inline-block;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.game-line-3-1:hover ~ .game-line-4 {
+  display: inline-block;
+  width: 970px;
+  height: 50px;
+}
+
+.game-line-3-1:hover ~ .game-line-4-1,
+.game-line-4-1:hover {
+  visibility: visible;
+  display: inline-block;
+}
+.game-line-4-1:hover {
+  width: 75%;
+}
+
+.game-line-5 {
+  width: 20px;
+  height: 300px;
+  visibility: hidden;
+}
+
+.game-line-4-1:hover ~ .game-line-5 {
+  visibility: visible;
+  height: 20px;
+}
+
+.game-line-5:hover {
+  visibility: visible;
+  height: 500px;
+}
+.game-line-6 {
+  visibility: hidden;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+}
+
+.game-line-5:hover ~ .game-line-6,
+.game-line-6:hover {
+  visibility: visible;
+}
+
+.game-line-6:hover {
+  width: 100%;
+  height: 100px;
+}
+
+.game-text {
+  visibility: hidden;
+  text-align: center;
+  height: 300px;
+}
+
+.game-line-6:hover ~ .game-text,
+.game-text:hover {
+  visibility: visible;
+  background: url("../img/game.jpg") 0 0 / cover no-repeat fixed;
+}

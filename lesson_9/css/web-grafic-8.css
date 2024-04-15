@@ -1,0 +1,89 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  /* !це стандартні параметри браузера за замовчуванням,
+   !body їх можна не прописувати */
+  /* font-weight: 400;
+  font-size: 16px; */
+  /* background-image: url(img/repeat.jpg); */
+  /* background-repeat: repeat-x; */
+  background: linear-gradient(
+    90deg,
+    rgba(59, 215, 121, 0.49625787815126055) 50%,
+    rgba(3, 204, 245, 0.49625787815126055) 100%
+  );
+  /* ?скролиться або не скролиться, фонове зображення, разом з блоком */
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+}
+
+h1 {
+  color: yellow;
+  padding: 25px;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: rgb(83, 83, 31);
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: rgb(83, 83, 31);
+  font-size: 20px;
+  margin-left: 30px;
+  font-weight: 700;
+  margin-left: 25px;
+}
+
+.container > * {
+  margin-bottom: 35px;
+}
+
+.container > *:last-child {
+  margin-right: 0;
+}
+
+.container li img {
+  vertical-align: middle;
+}
+
+.standart-img {
+  max-width: 750px;
+}
+
+.container li > span {
+  color: rgb(83, 83, 31);
+  font-size: 20px;
+  margin-left: 60px;
+  font-weight: 700;
+}
+
+.first-p::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: middle;
+  background: url("../img/krovato/icon.svg") 0 0 / 40px no-repeat;
+}
+
+.second-p::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: middle;
+  background: url("../img/krovato/arrow-icon.svg") 0 0 / 40px no-repeat;
+}
