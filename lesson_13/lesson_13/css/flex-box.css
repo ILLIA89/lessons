@@ -510,6 +510,7 @@ body {
   position: relative;
 
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   flex-grow: 1;
 
@@ -655,6 +656,7 @@ body {
 
 .card-list__footer-wrap {
   display: flex;
+  gap: 10px;
 }
 
 .card-list__discond-box {
