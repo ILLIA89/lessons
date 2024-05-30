@@ -201,3 +201,29 @@ textarea {
   background-color: aquamarine;
   border: 1px solid aquamarine;
 }
+
+/* !---button--- */
+
+.btn {
+  display: inline-block;
+  max-width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 15px;
+  color: #049246;
+  background-color: #ffef14;
+  border-radius: 10px;
+  border: 5px solid transparent;
+
+  will-change: color;
+
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.btn:hover {
+  color: #cfa012;
+  background-color: #57cf12;
+  border: 5px solid #cfa012;
+}
