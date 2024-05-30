@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson_14</title>
+    <link rel="stylesheet" href="css/forms.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h1>Форми</h1>
+            </div>
+
+        </header>
+        <main class="page">
+            <div class="page__container">
+
+                <form action="#" method="post" class="form">
+                    <!--! --Коли невквзано значення value то на сервер передається те що ми вписуємо в інпут-- -->
+
+                    <!-- !--за замовченням text-- -->
+                    <div class="form__input-wrap">
+                        <label for="text">Text/value</label>
+                        <input id="text" name="form[]" value="текст..." type="text" disabled class="form__input">
+                    </div>
+
+                    <div class="form__input-wrap">
+                        <label for="place">Text/placeholder/tabindex='2'</label>
+                        <input id="place" name="form[]" placeholder="введіть текст" tabindex="2" type="text"
+                            class="form__input">
+                    </div>
+
+                    <!--! --email-- -->
+
+                    <div class="form__input-wrap">
+                        <label for="email">E-mail/tabindex='1'</label>
+                        <input id="email" name="email" placeholder="e-mail" tabindex="1" type="email" autocomplete="off"
+                            class="form__input">
+                    </div>
+
+                    <!--! --tel-- -->
+                    <div class="form__input-wrap">
+                        <label for="tel">Tel/minlength/required</label>
+                        <input id="tel" name="tel" placeholder="введіть tel" type="tel" minlength="8" required
+                            class="form__input">
+                    </div>
+
+                    <!--! --password-- -->
+
+                    <div class="form__input-wrap">
+                        <label for="password">Password/required</label>
+                        <input id="password" name="pass" placeholder="password" autocomplete="off" type="password"
+                            required class="form__input">
+                    </div>
+
+                    <!--! --number-- -->
+
+                    <div class="form__input-wrap">
+                        <label for="num">Number</label>
+                        <input id="num" name="number" placeholder="number" type="number" autocomplete="on"
+                            class="form__input">
+                    </div>
+
+                    <!--! --search-- -->
+
+                    <div class="form__input-wrap">
+                        <label for="search">Search</label>
+                        <input id="search" name="search" placeholder="search" type="search" autocomplete="off"
+                            class="form__input">
+                    </div>
+
+                    <!--! --color-- -->
+
+                    <div class="form__input-wrap">
+                        <label for="color">Color</label>
+                        <input id="color" name="color" value="#444444" type="color" class="form__input">
+                    </div>
+
+                    <!--! --date-- -->
+                    <div class="form__input-wrap">
+                        <label for="date">Date</label>
+                        <input id="date" name="date" type="date" autocomplete="off" class="form__input">
+                    </div>
+
+                    <!--! --range-- -->
+                    <div class="form__input-wrap">
+                        <label for="range">Range</label>
+                        <input id="range" name="range" type="range" autocomplete="off" class="form__input">
+                    </div>
+
+                    <!--! --file-- -->
+                    <div class="form__input-wrap">
+                        <label for="file">File</label>
+                        <input id="file" name="file" type="file" accept="image/png, image/jpg" multiple
+                            class="form__input">
+                    </div>
+
+                    <!--! --textarea-- -->
+                    <div class="form__input-wrap">
+                        <label for="area">Textarea</label>
+                        <textarea id="area"> </textarea>
+                    </div>
+
+
+                    <!-- !--приховане поле-- -->
+                    <input name="token" value="slklrghakj" type="hidden" class="form__input">
+
+                    <!-- !--select-- -->
+
+                    <select name="form[]" class="form__select">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option selected value="3">Пункт 3</option>
+                        <option value="4">Пункт 4</option>
+                    </select>
+
+
+
+                </form>
+
+                <!-- !-- chekbox and radio -->
+                <form action="#" class="choose">
+                    <!-- !Таке поєднання інпут в лейбл, використовуємо лише для стилізації,
+                        !у всіх інших використовуємо окремо, в залежнсті до макету -->
+
+                    <!-- ! chekbox-->
+                    <label for="item-1" class="choose__checkbox checkbox">
+                        <input class="checkbox__input" id="item-1" type="checkbox">
+                        <span class="checkbox__text">Є бабоси?</span>
+                    </label>
+
+                    <label for="item-2" class="choose__checkbox checkbox">
+                        <input class="checkbox__input" id="item-2" type="checkbox">
+                        <span class="checkbox__text">Є кокоси?</span>
+                    </label>
+
+                    <!-- ! radio-->
+
+                    <label for="item-3" class="choose__radio radio">
+                        <input class="radio__input" id="item-3" type="radio" name="some-name">
+                        <span class="radio__text">вибери мене</span>
+                    </label>
+
+                    <label for="item-4" class="choose__radio radio">
+                        <input class="radio__input" id="item-4" type="radio" name="some-name">
+                        <span class="radio__text">краще мене</span>
+                    </label>
+
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            я футер
+        </footer>
+    </div>
+</body>
+
+</html>
