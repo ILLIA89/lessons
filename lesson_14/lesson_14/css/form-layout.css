@@ -1,0 +1,32 @@
+@import url('fonts.css');
+@import url('reset.css');
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  color: #2b2929;
+  background-color: #f8f8f8;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.order {
+  padding: 30px 0 40px 0;
+}
+.order__container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.order__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%; /* 48/40 */
+}
