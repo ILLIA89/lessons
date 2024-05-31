@@ -110,8 +110,8 @@ textarea {
 }
 
 /* !checkbox */
-.choose__checkbox {
-}
+/* .choose__checkbox {
+} */
 .checkbox {
   position: relative;
   cursor: pointer;
