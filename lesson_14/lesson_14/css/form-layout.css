@@ -45,6 +45,8 @@ body {
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 }
 
+/* !------інформація про покупця-------- */
+
 .info-wrapp {
   display: flex;
   flex-direction: column;
@@ -74,6 +76,10 @@ h2 {
   row-gap: 20px;
 }
 
+.info-wrapp__inputs:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .info-wrapp__input-line {
   flex-basis: 325px;
   flex-grow: 1;
@@ -87,9 +93,8 @@ h2 {
 .info-wrapp__input {
   width: 100%;
   padding: 10px 20px;
-
   border-radius: 8px;
-  border: 1px solid #d1d5d5;
+  outline: 1px solid #d1d5d5;
   background: #fff;
   transition: all 0.5;
 }
@@ -99,7 +104,49 @@ h2 {
   line-height: 187.5%; /* 30/16 */
 }
 
+.checkbox__label {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 187.5%; /* 30/16 */
+  color: #535353;
+}
+
+.checkbox__input:focus-visible + .checkbox__text {
+  outline: 1px solid #ffbc57;
+  outline-offset: 4px;
+}
+
 .info-wrapp__input:focus {
-  border: 1px solid #ffbc57;
-  transition: all 0.5;
+  outline: 1px solid #ffbc57;
+}
+
+.info-wrapp__input:focus::placeholder {
+  color: #ffbc57;
+}
+
+.checkbox__text::before {
+  content: '';
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5d5;
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+  background: url('../img/krovato/form/Checked.svg') center / cover no-repeat,
+    #ffbc57;
 }

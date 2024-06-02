@@ -159,8 +159,9 @@ textarea {
 
 /* !radio */
 
-.choose__radio {
-}
+/* .choose__radio {
+} */
+
 .radio {
   position: relative;
   cursor: pointer;
