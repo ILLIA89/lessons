@@ -37,7 +37,6 @@ body {
 
 .order__form {
   max-width: 740px;
-  padding: 27px 30px 30px;
 }
 .form {
   background-color: #fff;
@@ -47,18 +46,35 @@ body {
 
 /* !------інформація про покупця-------- */
 
-.info-wrapp {
-  display: flex;
-  flex-direction: column;
+.form__box {
+  position: relative;
 }
 
-.info-wrapp__label {
+/* !---- form__line не даю на останній елемент */
+
+.form__line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.wrapp {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.label-titel {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.info-wrapp__label:not(:last-child) {
+.wrapp__label:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -150,3 +166,5 @@ h2 {
   background: url('../img/krovato/form/Checked.svg') center / cover no-repeat,
     #ffbc57;
 }
+
+/* !--------------- */

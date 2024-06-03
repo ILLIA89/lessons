@@ -20,48 +20,77 @@
                     <h1 class="order__title">Оформлення замовлення</h1>
 
                     <form action="#" method="post" class="order__form form">
-                        <div class="form__info info-wrapp">
 
-                            <div class="info-wrapp__label">
-                                <img src="img/krovato/form/icon-info.svg" alt="інформація">
-                                <h2>Інформація про покупця</h2>
+
+                        <div class="form__box">
+                            <div class="form__info form__line wrapp">
+
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-info.svg" alt="інформація">
+                                    <h2>Інформація про покупця</h2>
+                                </div>
+
+                                <div class="info-wrapp__inputs">
+                                    <div class="info-wrapp__input-line">
+                                        <input class="info-wrapp__input" name="form[]" type="text"
+                                            placeholder="Прізвище" tabindex="1" required>
+                                    </div>
+                                    <div class="info-wrapp__input-line">
+                                        <input class="info-wrapp__input" name="form[]" type="tel"
+                                            placeholder="Контактний телефон" tabindex="4" required>
+                                    </div>
+                                    <div class="info-wrapp__input-line">
+                                        <input class="info-wrapp__input" name="form[]" type="text" placeholder="Ім'я"
+                                            tabindex="2" required>
+                                    </div>
+                                    <div class="info-wrapp__input-line">
+                                        <input class="info-wrapp__input" name="form[]" type="email" placeholder="E-mail"
+                                            tabindex="5" required>
+                                    </div>
+                                    <div class="info-wrapp__input-line">
+                                        <input class="info-wrapp__input" name="form[]" type="text"
+                                            placeholder="По батькові" tabindex="3" required>
+                                    </div>
+                                </div>
+
+                                <div class="info-wrapp__checkbox checkbox">
+                                    <label class="checkbox__label" for="check-1">
+
+                                        <input class="checkbox__input" id="check-1" type="checkbox">
+
+                                        <span class="checkbox__text">Отримуватиме замовлення інша людина</span>
+
+                                    </label>
+                                </div>
+
                             </div>
+                        </div>
 
-                            <div class="info-wrapp__inputs">
-                                <div class="info-wrapp__input-line">
-                                    <input class="info-wrapp__input" name="form[]" type="text" placeholder="Прізвище"
-                                        tabindex="1" required>
+                        <div class="form__box">
+                            <div class="form__delivery form__line wrapp">
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-dostavka.svg" alt="доставка">
+                                    <h2>Вибір способу доставки</h2>
                                 </div>
-                                <div class="info-wrapp__input-line">
-                                    <input class="info-wrapp__input" name="form[]" type="tel"
-                                        placeholder="Контактний телефон" tabindex="4" required>
+
+                                <div class="delivery-choice">
+
+                                    <label class="delivery-choice__label" for="choice-1">
+
+                                        <input class="delivery-choice__input" id="choice-1" type="checkbox">
+                                        <span>Самовивіз із магазину</span>
+                                        <span>Бесплатно</span>
+
+                                    </label>
+
                                 </div>
-                                <div class="info-wrapp__input-line">
-                                    <input class="info-wrapp__input" name="form[]" type="text" placeholder="Ім'я"
-                                        tabindex="2" required>
-                                </div>
-                                <div class="info-wrapp__input-line">
-                                    <input class="info-wrapp__input" name="form[]" type="email" placeholder="E-mail"
-                                        tabindex="5" required>
-                                </div>
-                                <div class="info-wrapp__input-line">
-                                    <input class="info-wrapp__input" name="form[]" type="text" placeholder="По батькові"
-                                        tabindex="3" required>
-                                </div>
+
                             </div>
-
-                            <div class="info-wrapp__checkbox checkbox">
-                                <label class="checkbox__label" for="check-1">
-
-                                    <input class="checkbox__input" id="check-1" type="checkbox">
-
-                                    <span class="checkbox__text">Отримуватиме замовлення інша людина</span>
-
-                                </label>
-                            </div>
-
 
                         </div>
+
+
+
 
                     </form>
                 </div>
