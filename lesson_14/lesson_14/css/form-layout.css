@@ -170,6 +170,7 @@ h2 {
 /* !--------------- */
 
 .delivery-choice {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -178,13 +179,13 @@ h2 {
 .delivery-choice__label {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: center;
   flex-basis: 210px;
   flex-grow: 1;
-  padding: 20px;
+  flex-shrink: 1;
+  padding: 20px 10px;
 
-  position: relative;
+  /* position: relative; */
   cursor: pointer;
 
   border: 3px solid #f8f8f8;
@@ -207,32 +208,6 @@ h2 {
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 }
 
-.delivery-choice__label:first-child::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background: url('../img/krovato/form/icon-map.svg') center / contain no-repeat;
-}
-
-.delivery-choice__label:nth-child(2n)::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background: url('../img/krovato/form/n-post.svg') center / contain no-repeat;
-}
-
-.delivery-choice__label:nth-child(3n)::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background: url('../img/krovato/form/currier.svg') center / contain no-repeat;
-}
-
-/* .delivery-choice__input:checked + .delivery-choice__label::before {
-  background: url('../img/krovato/form/check-circle.svg') center / cover
-    no-repeat;
-} */
-
 .delivery-choice__input {
   position: absolute;
   top: 0;
@@ -242,7 +217,40 @@ h2 {
   opacity: 0;
 }
 
+/* .delivery-choice__input:checked > .delivery-choice__label::before {
+  background: url('../img/krovato/form/check-circle.svg') center / cover
+    no-repeat;
+} */
+
+.delivery-choice__label::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  /* left: 50%; */
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  background: url('../img/krovato/form/check-circle.svg') center / cover
+    no-repeat;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label {
+  border: 3px solid #ffbc57;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label::before {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label > img {
+  opacity: 0;
+}
+
 .delivery-choice__text-1 {
+  text-align: center;
   color: inherit;
   line-height: 187.5%; /* 30/16 */
 }
