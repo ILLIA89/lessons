@@ -160,7 +160,7 @@ h2 {
 }
 
 .checkbox__input:checked + .checkbox__text::before {
-  background: url('../img/krovato/form/checke.svg') center / cover no-repeat,
+  background: url('../img/krovato/form/checked.svg') center / cover no-repeat,
     #ffbc57;
 }
 
