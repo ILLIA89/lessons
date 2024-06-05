@@ -23,7 +23,7 @@
 
 
                         <div class="form__box">
-                            <div class="form__info form__line wrapp">
+                            <div class="form__line wrapp">
 
                                 <div class="wrapp__label label-titel">
                                     <img src="img/krovato/form/icon-info.svg" alt="інформація">
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="form__box">
-                            <div class="form__delivery form__line wrapp">
+                            <div class="form__line wrapp">
                                 <div class="wrapp__label label-titel">
                                     <img src="img/krovato/form/icon-dostavka.svg" alt="доставка">
                                     <h2>Вибір способу доставки</h2>
@@ -110,7 +110,8 @@
                                 <div class="wrapp__location location">
 
                                     <div class="location__adress">
-                                        <img src="img/krovato/form/icon-map.svg" alt="мапа">
+                                        <div class="location__img-wrap"><img src="img/krovato/form/icon-map.svg"
+                                                alt="мапа"></div>
                                         <div class="location__text-box">
                                             <span>Графік роботи: щодня з 9:00 до 18:00</span>
                                             <span>м. Київ, пров. Ізяславський 52, пов. 2</span>
@@ -123,7 +124,57 @@
                             </div>
 
                         </div>
+                        <div class="form__box">
+                            <div class="form__line wrapp">
 
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-oplata.svg" alt="доставка">
+                                    <h2>Вибір способу оплати</h2>
+                                </div>
+
+                                <div class="wrapp__pay pay">
+
+                                    <label class="pay__radio radio" for="pay-1">
+                                        <input class="radio__input" id="pay-1" type="radio" value="postpaid" name="pay"
+                                            autocomplete="off">
+                                        <span class="radio__text">Готівкою при отриманні (Післясплата)</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-2">
+                                        <input class="radio__input" id="pay-2" type="radio" value="visa-mastercard"
+                                            name="pay" autocomplete="off">
+                                        <span class="radio__text">Оплата карткою на сайті</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-3">
+                                        <input class="radio__input" id="pay-3" type="radio" value="Privat" name="pay"
+                                            autocomplete="off">
+                                        <span class="radio__text">Privat Pay</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-4">
+                                        <input class="radio__input" id="pay-4" type="radio" value="krovato" name="pay"
+                                            autocomplete="off">
+                                        <span class="radio__text">Кредит від Krovato</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-5">
+                                        <input class="radio__input" id="pay-5" type="radio" value="privat-bank"
+                                            name="pay" autocomplete="off">
+                                        <span class="radio__text">Оплата частинами ПриватБанк</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-6">
+                                        <input class="radio__input" id="pay-6" type="radio" value="mono-bank" name="pay"
+                                            autocomplete="off">
+                                        <span class="radio__text">Оплата частинами МоноБанк</span>
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
 

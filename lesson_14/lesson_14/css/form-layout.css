@@ -160,7 +160,7 @@ h2 {
 }
 
 .checkbox__input:checked + .checkbox__text::before {
-  background: url('../img/krovato/form/Checked.svg') center / cover no-repeat,
+  background: url('../img/krovato/form/checked.svg') center / cover no-repeat,
     #ffbc57;
 }
 
@@ -269,32 +269,141 @@ h2 {
 .location__adress {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 10px;
-  justify-content: space-between; */
+  gap: 20px;
+  align-items: center;
 }
 .location__text-box {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  /* flex-grow: 1; */
-  align-items: center;
+  flex-grow: 1;
+  /* align-items: center; */
 }
 
-.location__adress > img {
+.location__text-box > span:first-child {
+  line-height: 187.5%; /* 30/16 */
+}
+
+.location__text-box > span:nth-child(2n) {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%; /* 28/20 */
+  color: #2b2929;
+}
+
+.location__img-wrap {
   flex-basis: 40px;
 }
 
-/* .location__text-box::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-
-  background: url('../') center / contain no-repeat;
-} */
+.location__img-wrap > img {
+  width: 100%;
+}
 
 .btn {
-  /* padding: 13px 20px; */
+  padding: 13px 20px;
   border-radius: 8px;
   background-color: #ffbc57;
   /* flex-basis: 142px; */
+}
+
+.btn > span {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 126.315789%; /* 24/19 */
+}
+
+.btn > span::before {
+  content: '';
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background: url('../img/krovato/form/btn-map.svg') center / contain no-repeat;
+}
+
+/* ! --------------pay------------------ */
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.pay__radio {
+  position: relative;
+  cursor: pointer;
+}
+.radio__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.radio__text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 17px;
+  line-height: 141.176471%; /* 24/17 */
+}
+
+.radio__text::before {
+  content: '';
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #b1b1b1;
+  transition: all 0.3s;
+}
+
+.radio__input:focus-visible + .radio__text {
+  outline: 1px solid #ffbc57;
+  outline-offset: 4px;
+}
+
+.radio__input:checked + .radio__text::before {
+  background: url('../img/krovato/form/checked.svg') center / cover no-repeat,
+    #ffbc57;
+}
+
+.radio:nth-child(2) > .radio__text::after {
+  content: '';
+  width: 106px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/master-visa-icon.svg') center / contain
+    no-repeat;
+}
+
+.radio:nth-child(3) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/privat-pay-logo.svg') center / contain
+    no-repeat;
+}
+
+.radio:nth-child(5) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/privaty-credit-logo.svg') center /
+    contain no-repeat;
+}
+
+.radio:nth-child(6) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/mono-bank-logo.svg') center / contain
+    no-repeat;
 }
