@@ -185,7 +185,7 @@ h2 {
 
   cursor: pointer;
   transition: all 0.4s ease;
-  border: 3px solid #f8f8f8;
+  outline: 3px solid #f8f8f8;
   border-radius: 8px;
 }
 
@@ -231,7 +231,8 @@ h2 {
 }
 
 .delivery-choice__input:checked + .delivery-choice__label {
-  border: 3px solid #ffbc57;
+  outline: 3px solid #ffbc57;
+  border: transparent;
 }
 
 .delivery-choice__input:checked + .delivery-choice__label::before {
@@ -243,7 +244,8 @@ h2 {
 }
 
 .delivery-choice__input:focus-visible:checked + .delivery-choice__label {
-  outline: 2px solid #ffbc57;
+  outline: 3px solid #ffbc57;
+  border: transparent;
 }
 
 .delivery-choice__text-1 {
@@ -278,7 +280,6 @@ h2 {
   flex-direction: column;
   row-gap: 5px;
   flex-grow: 1;
-  /* align-items: center; */
 }
 
 .location__text-box > span:first-child {
@@ -424,6 +425,7 @@ h2 {
 .comments__textarea {
   width: 100%;
   height: 150px;
+  line-height: 187.5%; /* 30/16 */
   padding: 10px 20px;
   border-radius: 8px;
   resize: vertical;
@@ -442,4 +444,23 @@ h2 {
 
 .comments__textarea:focus::placeholder {
   color: #ffbc57;
+}
+
+.wrapp__btn-comments {
+  align-self: center;
+}
+
+.btn--with-padding {
+  min-width: 460px;
+  padding: 8px 30px;
+}
+
+.btn--with-padding > span {
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.btn--with-padding > span::before {
+  content: '';
+  display: none;
 }
