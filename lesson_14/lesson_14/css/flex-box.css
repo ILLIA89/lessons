@@ -19,7 +19,18 @@ body {
 }
 
 /* ! -------------- header  ---------------------- */
+[class*='__container'] {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
+.title {
+  color: #2b2929;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%; /* 48/40 */
+}
 /* !--------------- first-row ------------------- */
 
 .header__row {
@@ -30,12 +41,6 @@ body {
   line-height: 187.5%;
   color: #535353;
   background-color: #f8f8f8;
-}
-
-.row__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .row__container--flex {
@@ -154,12 +159,6 @@ body {
   font-weight: 300;
   line-height: 169.230769%; /* 22/13 */
   border-bottom: 2px solid #f8f8f8;
-}
-
-.row-second__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .row-second__container--flex {
@@ -313,13 +312,7 @@ body {
   align-items: center;
 }
 
-/* !------ last-row -------- */
-
-.row-last__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+/* !-------------------- last-row ------------------------- */
 
 .row-last__container--flex {
   display: flex;
@@ -418,21 +411,8 @@ body {
   padding: 35px 0;
 }
 
-.popular__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 .popular__title:not(:last-child) {
   margin-bottom: 40px;
-}
-
-.title {
-  color: #2b2929;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 120%; /* 48/40 */
 }
 
 /* ! flex-container */
@@ -540,7 +520,7 @@ body {
 }
 
 .item-card__img-wrap > img {
-  max-width: 100%;
+  max-width: 250px;
 }
 
 .item-card__icon {
@@ -561,12 +541,6 @@ body {
 
   color: #2b2929;
   background-color: #f8f8f8;
-}
-
-.most-popular__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .most-popular__title:not(:last-child) {
@@ -617,7 +591,7 @@ body {
 }
 
 .card-list__img-wrap > img {
-  width: 100%;
+  max-width: 260px;
 }
 
 .card-list__text-wrap {
@@ -710,12 +684,6 @@ body {
   background-color: #f8f8f8;
 }
 
-.promotions__container {
-  max-width: 1320px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 .promotions__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -798,7 +766,7 @@ body {
 }
 
 .promotions__item-link > img {
-  width: 100%;
+  max-width: 410px;
   transform: scale(1);
   transition: all 0.5s ease;
 }
