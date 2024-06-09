@@ -451,7 +451,7 @@ body {
 }
 
 .btn--with-padding {
-  min-width: 460px;
+  max-width: 460px;
   padding: 8px 30px;
 }
 
