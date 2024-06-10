@@ -168,9 +168,19 @@ body {
   border-bottom: 2px solid #f8f8f8;
 }
 
+/* !logo */
+
 .row-second__logo {
   max-width: 250px;
   /* flex-grow: 1; */
+}
+
+@media (max-width: 1210px) {
+  .row-second__logo > img {
+    width: 170px;
+    overflow: hidden;
+    /* flex-grow: 1; */
+  }
 }
 
 .row-second__container--flex {
@@ -182,7 +192,7 @@ body {
   column-gap: 5px;
 }
 
-/* ! ----- btn-header ----- */
+/* ! ----- btn ----- */
 
 .btn {
   display: flex;
@@ -218,40 +228,31 @@ body {
 
 /* !---- input + input-wrapp ---- */
 
-.search > a {
-  display: block;
-}
-
-.row-second__input-search {
+.search {
+  flex: 0 1 421px;
   position: relative;
-  max-width: 421px;
-  width: 100%;
-  /* flex: 0 1 421px; */
-}
-
-.search__input {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  line-height: 1.875;
-  padding: 10px 40px 10px 15px;
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid #b1b1b1;
   background-color: #fff;
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+}
+.search__input {
+  padding-left: 15px;
+  padding-right: 54px;
+  color: #000;
+  border-radius: 8px;
+  height: 50px;
 }
 
-.search__icon {
+.search__input::placeholder {
+  color: #b1b1b1;
+}
+.search__btn {
   position: absolute;
-  /* ?%%%%%%%% */
-  top: 20%;
-  left: 90.5%;
-  width: 24px;
-  height: 24px;
-}
-
-.search__icon > img {
-  max-width: 24px;
+  top: 0;
+  right: 0;
+  width: 54px;
+  height: 100%;
+  background: url('../img/krovato/menu/search.svg') center no-repeat;
 }
 
 /* !----- contact ----- */
@@ -270,11 +271,6 @@ body {
   color: #2b2929;
 }
 
-/* ?++++ */
-/* @media (min-width: 1213.98px) {
-  
-} */
-
 .contact__icon-tel {
   transform: rotate(5deg);
   transition: all 0.4s ease;
@@ -284,7 +280,7 @@ body {
   display: flex;
   /* ? забороняє блоку 
   ? зменшуватись, таким чином не ломається
-  ? конструкція в середині */
+  ? конструкція в середині!!!!!!! */
   flex-shrink: 0;
   align-items: center;
   gap: 10px;
