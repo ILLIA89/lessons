@@ -228,7 +228,6 @@ body {
     font-size: 13px;
     font-weight: 300;
     line-height: 169.230769%;
-    /* border-bottom: 2px solid #f8f8f8; */
   }
 
   .row-second__container--flex {
@@ -241,6 +240,10 @@ body {
   .box {
     display: flex;
     justify-content: space-between;
+  }
+
+  .box__tel {
+    display: none;
   }
 
   .icon-burger {
@@ -263,6 +266,7 @@ body {
   }
 
   .logo {
+    max-width: 250px;
     width: 170px;
     display: flex;
     justify-content: flex-end;
@@ -272,6 +276,12 @@ body {
 
   .logo > img {
     max-width: 250px;
+  }
+
+  .row-second__adaptive-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
   }
 
   /* ! ----- btn ----- */
@@ -319,24 +329,89 @@ body {
 
   .row-second__favourite {
     display: flex;
-    align-items: space-between;
+    justify-content: space-around;
     gap: 10px;
   }
 
   .favourite__link {
+    max-width: 50px;
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
   }
 
   .favourite__link > img {
-    max-width: 50px;
+    width: 100%;
   }
 
   .favourite > .favourite__link:nth-child(1) {
     display: none;
   }
 }
+
+@media (min-width: 480px) {
+  .header__second-row {
+    padding: 27px 10px 27px 10px;
+  }
+
+  .row-second__adaptive-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 0 12px 0;
+  }
+
+  .row-second__box {
+    position: relative;
+  }
+
+  .row-second__box::before {
+    content: ' ';
+    position: absolute;
+    top: 51px;
+    left: 0;
+    margin-left: -30px;
+    width: 130%;
+    height: 2px;
+    background-color: #f8f8f8;
+  }
+
+  .btn {
+    flex-grow: 1;
+  }
+
+  .row-second__favourite {
+    order: 2;
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  .box__tel {
+    order: 3;
+    display: block;
+  }
+
+  .logo {
+    order: 2;
+    max-width: 215px;
+  }
+
+  .logo > img {
+    width: 100%;
+  }
+
+  .icon-burger > span::before {
+    content: '';
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: url('../img/krovato/menu/burger.svg') 0 0 / 100% no-repeat;
+    position: absolute;
+    top: 0;
+    left: -5px;
+  }
+}
+/* !______________________________________________________ */
 
 /* .header__second-row {
   padding: 20px 0 23px 0;
@@ -500,6 +575,8 @@ body {
     transform: scale(1.1);
   } */
 }
+
+/* !______________________________________________________ */
 
 /* !-------------------- last-row ------------------------- */
 
