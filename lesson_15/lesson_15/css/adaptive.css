@@ -238,6 +238,21 @@ body {
 
 /* !--------------- Second-row ------------------- */
 
+@media (min-width: 0px) and (max-width: 479px) {
+  .logo {
+    max-width: 250px;
+    width: 170px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .logo > img {
+    max-width: 250px;
+  }
+}
+
 @media (min-width: 0px) {
   .header__second-row {
     padding: 10px 0 10px 0;
@@ -283,19 +298,6 @@ body {
     position: absolute;
     top: 0;
     left: -43px;
-  }
-
-  .logo {
-    max-width: 250px;
-    width: 170px;
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-
-  .logo > img {
-    max-width: 250px;
   }
 
   .row-second__adaptive-box {
@@ -428,8 +430,85 @@ body {
   }
 }
 
+/* !? ----Tablet */
+
 @media (min-width: 768px) {
+  /* !---- input + input-wrapp ---- */
+  .search {
+    order: 2;
+    display: block;
+    flex: 0 1 421px;
+    position: relative;
+  }
+  .search__input {
+    padding-left: 15px;
+    padding-right: 54px;
+    color: #000;
+    outline: 1px solid #b1b1b1;
+    border-radius: 8px;
+    height: 45px;
+    background-color: #fff;
+  }
+
+  .search__input::placeholder {
+    color: #b1b1b1;
+  }
+  .search__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54px;
+    height: 100%;
+    background: url('../img/krovato/menu/search.svg') center no-repeat;
+  }
+
+  .favourite > .favourite__link:nth-child(2) {
+    display: none;
+  }
+
+  .search__input:focus {
+    outline: 1px solid #ffbc57;
+  }
 }
+
+/* !? ----PC----- */
+
+@media (min-width: 1024px) {
+  .header__second-row {
+    padding: 20px 0 23px 0;
+  }
+
+  .row-second__box::before {
+    content: '';
+    display: none;
+  }
+
+  .box__tel {
+    display: none;
+  }
+
+  .icon-burger {
+    display: none;
+  }
+
+  .row-second__container--flex {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+
+  /* !logo */
+
+  .logo {
+    max-width: 250px;
+  }
+
+  .search__input {
+    height: 50px;
+  }
+}
+
 /* !______________________________________________________ */
 
 /* .header__second-row {
@@ -484,7 +563,6 @@ body {
 } */
 
 /* !---- input + input-wrapp ---- */
-
 /* .search {
   flex: 0 1 421px;
   position: relative;
@@ -510,7 +588,8 @@ body {
   width: 54px;
   height: 100%;
   background: url('../img/krovato/menu/search.svg') center no-repeat;
-} */
+}
+
 
 /* !----- contact ----- */
 
