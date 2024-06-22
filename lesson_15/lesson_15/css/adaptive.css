@@ -223,7 +223,7 @@ body {
     flex-shrink: 0;
   }
 
-  .logo > img {
+  .logo img {
     max-width: 250px;
   }
 }
@@ -389,7 +389,7 @@ body {
     max-width: 215px;
   }
 
-  .logo > img {
+  .logo img {
     width: 100%;
   }
 
