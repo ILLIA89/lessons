@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="css/form-layout.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+        </header>
+        <main class="page">
+            <section class="page__order order">
+                <div class="order__container">
+                    <h1 class="order__title">Оформлення замовлення</h1>
+
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="order__form form">
+
+
+                        <div class="form__box">
+                            <div class="form__line wrapp">
+
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-info.svg" alt="інформація">
+                                    <h2 class="title">Інформація про покупця</h2>
+                                </div>
+
+                                <div class="wrapp__inputs">
+                                    <div class="wrapp__input-line">
+                                        <input class="wrapp__input" name="form[]" type="text" placeholder="Прізвище"
+                                            tabindex="1" required>
+                                    </div>
+                                    <div class="wrapp__input-line">
+                                        <input class="wrapp__input" name="form[]" type="tel"
+                                            placeholder="Контактний телефон" tabindex="4" required>
+                                    </div>
+                                    <div class="wrapp__input-line">
+                                        <input class="wrapp__input" name="form[]" type="text" placeholder="Ім'я"
+                                            tabindex="2" required>
+                                    </div>
+                                    <div class="wrapp__input-line">
+                                        <input class="wrapp__input" name="form[]" type="email" placeholder="E-mail"
+                                            tabindex="5" required>
+                                    </div>
+                                    <div class="wrapp__input-line">
+                                        <input class="wrapp__input" name="form[]" type="text" placeholder="По батькові"
+                                            tabindex="3" required>
+                                    </div>
+                                </div>
+
+                                <div class="wrapp__checkbox checkbox">
+                                    <label class="checkbox__label" for="check-1">
+
+                                        <input class="checkbox__input" id="check-1" type="checkbox">
+
+                                        <span class="checkbox__text">Отримуватиме замовлення інша людина</span>
+
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form__box">
+                            <div class="form__line wrapp">
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-dostavka.svg" alt="доставка">
+                                    <h2 class="title">Вибір способу доставки</h2>
+                                </div>
+
+                                <div class="wrapp__choice delivery-choice">
+
+
+                                    <input class="delivery-choice__input" id="choice-1" name="order[choise]"
+                                        value="point" type="radio" checked>
+
+                                    <label class="delivery-choice__label" for="choice-1">
+                                        <img src="img/krovato/form/icon-map.svg" alt="самовивіз">
+                                        <span class="delivery-choice__text-1">Самовивіз із магазину</span>
+                                        <span class="delivery-choice__text-2">Безплатно</span>
+                                    </label>
+
+
+                                    <input class="delivery-choice__input" id="choice-2" name="order[choise]"
+                                        value="newpost" type="radio">
+
+                                    <label class="delivery-choice__label" for="choice-2">
+                                        <img src="img/krovato/form/n-post.svg" alt="нова Пошта">
+                                        <span class="delivery-choice__text-1">Доставка Нова Пошта</span>
+                                        <span class="delivery-choice__text-2">≈ від 500 грн</span>
+                                    </label>
+
+
+                                    <input class="delivery-choice__input" id="choice-3" name="order[choise]"
+                                        value="courier" type="radio">
+
+                                    <label class="delivery-choice__label" for="choice-3">
+                                        <img src="img/krovato/form/currier.svg" alt="кур'єр">
+                                        <span class="delivery-choice__text-1">Доставка кур'єром</span>
+                                        <span class="delivery-choice__text-2">≈ від 200 грн</span>
+                                    </label>
+
+                                </div>
+
+                                <div class="wrapp__location location">
+
+                                    <div class="location__adress">
+                                        <div class="location__img-wrap"><img src="img/krovato/form/icon-map.svg"
+                                                alt="мапа"></div>
+                                        <div class="location__text-box">
+                                            <span>Графік роботи: щодня з 9:00 до 18:00</span>
+                                            <span>м. Київ, пров. Ізяславський 52, пов. 2</span>
+                                        </div>
+                                        <button class="location__btn btn" type="button"><span>На мапі</span></button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="form__box">
+                            <div class="form__line wrapp">
+
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-oplata.svg" alt="доставка">
+                                    <h2 class="title">Вибір способу оплати</h2>
+                                </div>
+
+                                <div class="wrapp__pay pay">
+
+                                    <label class="pay__radio radio" for="pay-1">
+                                        <input class="radio__input" id="pay-1" type="radio" value="postpaid" name="pay"
+                                            checked>
+                                        <span class="radio__text">Готівкою при отриманні (Післясплата)</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-2">
+                                        <input class="radio__input" id="pay-2" type="radio" value="visa-mastercard"
+                                            name="pay">
+                                        <span class="radio__text">Оплата карткою на сайті</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-3">
+                                        <input class="radio__input" id="pay-3" type="radio" value="Privat" name="pay">
+                                        <span class="radio__text">Privat Pay</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-4">
+                                        <input class="radio__input" id="pay-4" type="radio" value="krovato" name="pay">
+                                        <span class="radio__text">Кредит від Krovato</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-5">
+                                        <input class="radio__input" id="pay-5" type="radio" value="privat-bank"
+                                            name="pay">
+                                        <span class="radio__text">Оплата частинами ПриватБанк</span>
+                                    </label>
+
+                                    <label class="pay__radio radio" for="pay-6">
+                                        <input class="radio__input" id="pay-6" type="radio" value="mono-bank"
+                                            name="pay">
+                                        <span class="radio__text">Оплата частинами МоноБанк</span>
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form__box">
+                            <div class="wrapp">
+
+                                <div class="wrapp__label label-titel">
+                                    <img src="img/krovato/form/icon-comment.svg" alt="доставка">
+                                    <h2 class="title">Коментар до замовлення</h2>
+                                </div>
+
+                                <div class="wrapp__comments comments">
+                                    <textarea class="comments__textarea" autocomplete="off" placeholder="Ваш коментар"
+                                        name="message"></textarea>
+                                </div>
+                                <div class="wrapp__btn-comments">
+                                    <button class="btn btn--with-padding" type="submit"><span>оформити
+                                            замовлення</span></button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>
