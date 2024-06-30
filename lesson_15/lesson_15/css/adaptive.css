@@ -81,6 +81,7 @@ body {
 
   .nav__link {
     position: relative;
+    transition: all 0.4s ease;
   }
 
   .nav__link::before {
@@ -186,7 +187,6 @@ body {
 @media (any-hover: hover) {
   .nav__link:hover {
     color: #ffbc57;
-    transition: all 0.4s ease;
   }
 
   .nav__link:hover:before {
@@ -199,7 +199,6 @@ body {
 
   .help__lang-switch:hover {
     color: #ffbc57;
-    transition: all 0.4s ease;
   }
 
   .help__lang-switch:hover::before {
@@ -547,17 +546,14 @@ body {
 
 @media (any-hover: hover) {
   .btn:hover {
-    transition: all 0.4s ease;
     background-color: #ef940b;
   }
 
   .contact__btn:hover > .contact__icon-tel {
     transform: rotate(-10deg);
-    transition: all 0.5s ease;
   }
 
   .favourite__link:hover > img {
-    transition: all 0.5s ease;
     transform: scale(1.1);
   }
 }
@@ -678,7 +674,6 @@ body {
   }
 
   .list-pay__item:hover > .list-pay__link::before {
-    transition: all 0.5s ease;
     transform: scale(1.1);
   }
 }
@@ -816,6 +811,7 @@ body {
   z-index: 3;
 }
 
+/* ?------------------------------------------------------------- */
 /* !------------------------ most-popula ------------------------ */
 
 .most-popular {
