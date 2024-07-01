@@ -133,15 +133,17 @@ body {
   }
 
   .top-header__lang {
+    position: relative;
+    cursor: pointer;
   }
-  .lang-top-header {
-  }
+
   .lang-top-header__label {
     display: flex;
     align-items: center;
     gap: 6px;
     font-size: 19px;
     font-weight: 600;
+    line-height: 126.315789%; /* 24/19 */
   }
 
   .lang-top-header__label::after {
@@ -152,44 +154,27 @@ body {
     background: url('../img/krovato/menu/arrow.svg') 0 0 / 100% no-repeat;
   }
   .lang-top-header__list {
+    position: absolute;
+    z-index: 55;
+    top: 120%;
+    background-color: #ffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.4s;
+
+    pointer-events: none;
   }
-  .lang-top-header__item {
+
+  .lang-top-header__item:not(:last-child) {
+    margin-bottom: 5px;
   }
   .lang-top-header__link {
-  }
-  /* .help__lang-switch {
-    display: flex;
     position: relative;
-    align-self: center;
-    
-    line-height: 126.316%;
-    color: #535353;
-  } */
-
-  /* .help__lang-switch::after {
-    content: '';
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    background: url('../img/krovato/menu/arrow.svg') 100% 100% / cover no-repeat;
-  } */
-
-  /* .help__lang-switch::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #535353;
-    border-radius: 5px;
-    transform: scale(0);
-    transition: all 0.4s ease;
-  } */
-
-  /* .help__lang-switch:hover::before {
-    transform: scaleX(1);
-  } */
+    font-size: 19px;
+    line-height: 126.315789%; /* 24/19 */
+  }
 }
 
 @media (any-hover: hover) {
@@ -201,20 +186,18 @@ body {
     transform: scaleX(1);
   }
 
-  /* .list__link:hover > img {
-    transform: scale(1.1);
-  } */
+  .top-header__lang:hover .lang-top-header__list {
+    top: 100%;
+    opacity: 1;
+    pointer-events: all;
+  }
 
-  /* .help__lang-switch:hover {
+  .lang-top-header__link:hover {
     color: #ffbc57;
-  } */
-
-  /* .help__lang-switch:hover::before {
-    transform: scaleX(1);
-  } */
+  }
 }
 
-/* !--------------- Second-row ------------------- */
+/* !--------------- body-header ------------------- */
 
 /* ? Mobile------ */
 
@@ -234,54 +217,17 @@ body {
 }
 
 @media (min-width: 0px) {
-  .header__second-row {
+  .body-header {
     padding: 10px 0 10px 0;
-  }
-
-  .row-second {
     color: #535353;
     font-size: 13px;
     font-weight: 300;
     line-height: 169.230769%;
   }
 
-  .row-second__container--flex {
+  .body-header__container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-
-  .box {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .box__tel {
-    display: none;
-  }
-
-  .icon-burger {
-    display: flex;
-  }
-
-  .icon-burger > span {
-    position: relative;
-  }
-
-  .icon-burger > span::before {
-    content: '';
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    background: url('../img/krovato/menu/burger.svg') 0 0 / 100% no-repeat;
-    position: absolute;
-    top: 0;
-    left: -43px;
-  }
-
-  .row-second__adaptive-box {
-    display: flex;
     flex-direction: column;
     row-gap: 10px;
   }
@@ -291,7 +237,6 @@ body {
   .btn {
     display: flex;
     align-self: center;
-    order: 2;
     max-width: 145px;
     padding: 11px 20px;
     background-color: #ffbc57;
@@ -350,63 +295,24 @@ body {
 }
 
 @media (min-width: 480px) {
-  .header__second-row {
+  /* !!+++ */
+  .body-header {
     padding: 27px 10px 27px 10px;
   }
 
-  .row-second__adaptive-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-
-    padding: 12px 0 12px 0;
-  }
-
-  .row-second__box {
-    position: relative;
-  }
-
-  .row-second__box::before {
-    content: ' ';
-    position: absolute;
-    top: 63px;
-    left: 0;
-    margin-left: -30px;
-    width: 130%;
-    height: 2px;
-    background-color: #f8f8f8;
-  }
+  /* !!____ */
 
   .row-second__favourite {
-    order: 2;
     display: inline-flex;
     gap: 20px;
   }
 
-  .box__tel {
-    order: 3;
-    display: block;
-  }
-
   .logo {
-    order: 2;
     max-width: 215px;
   }
 
   .logo img {
     width: 100%;
-  }
-
-  .icon-burger > span::before {
-    content: '';
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    background: url('../img/krovato/menu/burger.svg') 0 0 / 100% no-repeat;
-    position: absolute;
-    top: 0;
-    left: -5px;
   }
 }
 
@@ -415,7 +321,6 @@ body {
 @media (min-width: 768px) {
   /* !---- input + input-wrapp ---- */
   .search {
-    order: 2;
     display: block;
     flex: 0 1 421px;
     position: relative;
@@ -442,9 +347,9 @@ body {
     background: url('../img/krovato/menu/search.svg') center no-repeat;
   }
 
-  .favourite > .favourite__link:nth-child(2) {
+  /* .favourite > .favourite__link:nth-child(2) {
     display: none;
-  }
+  } */
 
   .search__input:focus::placeholder {
     color: #ffbc57;
@@ -458,44 +363,28 @@ body {
 /* !? PC----- */
 
 @media (min-width: 1024px) {
-  .header__second-row {
+  /* !!!+++ */
+  .body-header {
     padding: 20px 0 23px 0;
     border-bottom: 2px solid #f8f8f8;
   }
 
-  .row-second__box::before {
-    content: '';
-    display: none;
-  }
-
-  .box__tel {
-    display: none;
-  }
-
-  .icon-burger {
-    display: none;
-  }
-
-  .row-second__container--flex {
+  .body-header__container {
     position: relative;
     display: flex;
     flex-direction: row;
-
-    column-gap: 10px;
+    flex-wrap: nowrap;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: space-between;
   }
+  /* !__________ */
 
   /* !logo */
 
   .logo {
     display: flex;
     max-width: 250px;
-  }
-
-  /* !adaptive-box */
-
-  .row-second__adaptive-box {
-    column-gap: 10px;
-    flex-grow: 1;
   }
 
   /* !Contact */
@@ -509,7 +398,6 @@ body {
     flex-shrink: 0;
     align-items: center;
     gap: 10px;
-    order: 2;
   }
 
   .contact__wrap > li:first-child {
@@ -567,13 +455,11 @@ body {
 }
 
 @media (min-width: 1107px) {
-  .row-second__container--flex {
+  /* !+++ */
+  /* .body-header__container {
     column-gap: 34px;
-  }
-
-  .row-second__adaptive-box {
-    column-gap: 30px;
-  }
+  } */
+  /* !___ */
 }
 
 /* !______________________________________________________ */
