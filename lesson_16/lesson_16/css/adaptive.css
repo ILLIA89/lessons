@@ -229,7 +229,7 @@ body {
     color: #535353;
     font-size: 13px;
     font-weight: 300;
-    line-height: 169.230769%;
+    /* line-height: 169.230769%; */
   }
 
   .body-header__container {
@@ -269,6 +269,8 @@ body {
     color: #fff;
   }
 
+  /* ! contact */
+
   /* ! actions*/
 
   .body-header__actions {
@@ -305,7 +307,7 @@ body {
   /* !!____ */
 }
 
-/* !? ----Tablet */
+/* ? Tablet---- */
 
 @media (min-width: 768px) {
   /* !---- input + input-wrapp ---- */
@@ -345,7 +347,7 @@ body {
   }
 }
 
-/* !? PC----- */
+/* ? PC----- */
 
 @media (min-width: 1024px) {
   /* !!!+++ */
@@ -374,11 +376,97 @@ body {
 
   /* !Contact */
 
+  .body-header__contacts {
+  }
+  .contacts-body-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+  .contacts-body-header__icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    transform: rotate(5deg);
+    transition: all 0.4s ease;
+  }
+  .contacts-body-header__body {
+    position: relative;
+    padding-right: 27px;
+  }
+
+  .contacts-body-header__body::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+    background: url('../img/krovato/menu/arrow.svg') 0 0 no-repeat;
+    width: 12px;
+    height: 8px;
+  }
+
+  .contacts-body-header__label {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .contacts-body-header__label:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .contacts-body-header__phones {
+  }
+  .phones-contacts-header {
+  }
+  .phones-contacts-header__main {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2b2929;
+  }
+
+  .phones-contacts-header__items {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    padding-top: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
+  .phones-contacts-header__list {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .phones-contacts-header__item {
+  }
+
+  .phones-contacts-header__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .phones-contacts-header__link {
+    font-size: 19px;
+    font-weight: 600;
+    color: #2b2929;
+    transition: all 0.3s;
+  }
+
   /* ? flex-shrink: 0; забороняє блоку 
   ? зменшуватись, таким чином не ломається
   ? конструкція в середині!!!!!!! */
 
-  .row-second__contact {
+  /* .row-second__contact {
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -409,7 +497,7 @@ body {
     flex-direction: column;
 
     justify-content: space-between;
-  }
+  } */
 }
 
 @media (min-width: 1170px) {
@@ -433,12 +521,22 @@ body {
     background-color: #ef940b;
   }
 
-  .contact__btn:hover > .contact__icon-tel {
-    transform: rotate(-10deg);
+  .contacts-body-header__icon:hover {
+    transform: rotate(-15deg);
   }
 
   .body-header__actions-link:hover {
     background-color: #ffbc57;
+  }
+
+  .phones-contacts-header:hover .phones-contacts-header__items {
+    top: 100%;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .phones-contacts-header__link:hover {
+    color: #ffbc57;
   }
 }
 
