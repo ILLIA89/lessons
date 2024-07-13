@@ -76,8 +76,6 @@
       </div>
 
 
-
-
       <div class="header__body body-header">
         <div class="body-header__container">
 
@@ -96,15 +94,15 @@
 
           <!-- !form -->
 
-          <form method="post" action="https://jsonplaceholder.typicode.com/posts"
-            class="row-second__input-search search">
+          <form class="body-header__search search-body-header" method="post"
+            action="https://jsonplaceholder.typicode.com/posts">
 
             <!-- !input -->
 
-            <input type="text" placeholder="Пошук товарів" class="search__input" required>
+            <input type="text" placeholder="Пошук товарів" class="search-body-header__input" required>
 
             <!-- ! search-btn -->
-            <button type="submit" class="search__btn">
+            <button type="submit" class="search-body-header__btn">
             </button>
 
           </form>
@@ -129,6 +127,7 @@
                 <a href="tel:0679294545" class="phones-contacts-header__main">067 929-45-45</a>
 
                 <div class="phones-contacts-header__items">
+
                   <ul class="phones-contacts-header__list">
 
                     <li class="phones-contacts-header__item">
@@ -150,9 +149,6 @@
 
             </div>
 
-            <!-- <a href="#" target="_blank" class="contact__arrow-list">
-              <img src="/img/krovato/menu/arrow.svg" alt="" class="contact__icon-arrow">
-            </a> -->
           </div>
 
 
@@ -172,43 +168,75 @@
         </div>
       </div>
 
-      <div class="header__last-row row-last">
-        <div class="row-last__container row-last__container--flex">
-          <ul class="row-last__pay-list list-pay">
-            <li class="list-pay__item">
-              <a href="#" target="_blank" class="list-pay__link">Акції</a>
-            </li>
-            <li class="list-pay__item">
-              <a href="#" target="_blank" class="list-pay__link">Розпродаж</a>
-            </li>
-            <li class="list-pay__item">
-              <a href="#" target="_blank" class="list-pay__link">Купити в кредит</a>
-            </li>
-          </ul>
 
-          <ul class="row-last__nav nav">
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Дитяча</a>
-            </li>
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Кухня</a>
-            </li>
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Ванна</a>
-            </li>
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Спальня</a>
-            </li>
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Передпокій</a>
-            </li>
-            <li class="nav__item nav__item--margin-right">
-              <a href="#" target="_blank" class="nav__link">Офіс</a>
-            </li>
-          </ul>
+
+
+
+
+
+      <div class="header__bottom bottom-header">
+
+        <div class="bottom-header__container">
+
+          <div class="bottom-header__sections sections-menu">
+
+            <ul class="sections-menu__list">
+
+              <li class="sections-menu__item">
+                <a href="#" target="_blank" class="sections-menu__link sections-menu__link--star">Акції</a>
+              </li>
+
+              <li class="sections-menu__item">
+                <a href="#" target="_blank" class="sections-menu__link sections-menu__link--sale">Розпродаж</a>
+              </li>
+
+              <li class="sections-menu__item">
+                <a href="#" target="_blank" class="sections-menu__link sections-menu__link--part">Купити в кредит</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="bottom-header__use use-menu">
+
+
+            <ul class="use-menu__list">
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Дитяча</a>
+              </li>
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Кухня</a>
+              </li>
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Ванна</a>
+              </li>
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Спальня</a>
+              </li>
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Передпокій</a>
+              </li>
+
+              <li class="use-menu__item">
+                <a href="#" target="_blank" class="use-menu__link">Офіс</a>
+              </li>
+
+            </ul>
+          </div>
+
         </div>
+
       </div>
+
     </header>
+
+
 
 
     <main class="page">
@@ -652,6 +680,10 @@
     </main>
     <footer class="footer">я футер</footer>
   </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/dynamic_adapt.js"></script>
 </body>
 
 </html>

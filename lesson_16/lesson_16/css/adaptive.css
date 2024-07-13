@@ -123,6 +123,10 @@ body {
     transition: transform 0.4s;
   }
 
+  .social-top-header__link > img {
+    transition: all 0.4s;
+  }
+
   .social-top-header__link--whatsapp {
     background-color: #75b73b;
   }
@@ -187,6 +191,14 @@ body {
 
   .nav-top-header__link:hover:before {
     transform: scaleX(1);
+  }
+
+  .social-top-header__link:hover {
+    transform: scale(1.1);
+  }
+
+  .social-top-header__link:hover > img {
+    transform: rotate(40deg);
   }
 
   .top-header__lang:hover .lang-top-header__list {
@@ -289,7 +301,11 @@ body {
 
     border-radius: 50%;
     border: 2px solid #ffbc57;
-    transition: background-color 0.3s;
+    transition: all 0.4s;
+  }
+
+  .body-header__actions-link > img {
+    transition: all 0.4s;
   }
 }
 
@@ -311,25 +327,30 @@ body {
 
 @media (min-width: 768px) {
   /* !---- input + input-wrapp ---- */
-  .search {
-    display: block;
-    flex: 0 1 421px;
+  .body-header__search {
     position: relative;
   }
-  .search__input {
-    padding-left: 15px;
-    padding-right: 54px;
-    color: #000;
-    outline: 1px solid #b1b1b1;
+
+  .search-body-header {
     border-radius: 8px;
     height: 50px;
+    flex-grow: 1;
+  }
+
+  .search-body-header__input {
+    padding-left: 15px;
+    padding-right: 54px;
+    color: #b1b1b1;
+    outline: 1px solid #b1b1b1;
+    border-radius: 8px;
+    height: 100%;
     background-color: #fff;
   }
 
-  .search__input::placeholder {
+  .search-body-header__input::placeholder {
     color: #b1b1b1;
   }
-  .search__btn {
+  .search-body-header__btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -338,11 +359,7 @@ body {
     background: url('../img/krovato/menu/search.svg') center no-repeat;
   }
 
-  .search__input:focus::placeholder {
-    color: #ffbc57;
-  }
-
-  .search__input:focus {
+  .search-body-header__input:focus {
     outline: 1px solid #ffbc57;
   }
 }
@@ -398,6 +415,7 @@ body {
     transform: rotate(5deg);
     transition: all 0.4s ease;
   }
+
   .contacts-body-header__body {
     position: relative;
     padding-right: 27px;
@@ -460,6 +478,10 @@ body {
     font-weight: 600;
     color: #2b2929;
     transition: all 0.3s;
+  }
+
+  .body-header__actions-link > img {
+    transition: all 0.4s;
   }
 
   /* ? flex-shrink: 0; забороняє блоку 
@@ -525,8 +547,16 @@ body {
     transform: rotate(-15deg);
   }
 
+  .phones-contacts-header__link:hover {
+    color: #ffbc57;
+  }
+
   .body-header__actions-link:hover {
     background-color: #ffbc57;
+  }
+
+  .body-header__actions-link:hover > img {
+    transform: scale(1.1);
   }
 
   .phones-contacts-header:hover .phones-contacts-header__items {
@@ -559,13 +589,14 @@ body {
 /* ?---laptop-PC */
 
 @media (min-width: 1024px) {
-  .row-last {
+  .bottom-header {
     padding: 18px 0;
   }
 
-  .row-last__container--flex {
+  .bottom-header__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     column-gap: 10px;
 
@@ -575,7 +606,7 @@ body {
     line-height: 126.315789%;
   }
 
-  .row-last__pay-list {
+  .sections-menu__list {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -583,41 +614,40 @@ body {
     row-gap: 5px;
   }
 
-  .list-pay__link {
+  .sections-menu__link {
     display: flex;
     align-items: center;
     gap: 5px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 
-  .list-pay__link::before {
-    transition: all 0.5s ease;
-  }
-
-  .list-pay__item:first-child > .list-pay__link::before {
+  .sections-menu__link--star::before {
     content: '';
     align-self: start;
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
     background: url('../img/krovato/menu/akcii.svg') 0 0 / cover no-repeat;
   }
 
-  .list-pay__item:nth-child(2) > .list-pay__link::before {
+  .sections-menu__link--sale::before {
     content: '';
     align-self: start;
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
     background: url('../img/krovato/menu/credit.svg') 0 0 / cover no-repeat;
   }
 
-  .list-pay__item:nth-child(3) > .list-pay__link::before {
+  .sections-menu__link--part::before {
     content: '';
     align-self: start;
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
     background: url('../img/krovato/menu/sale.svg') 0 0 / cover no-repeat;
   }
 
@@ -630,7 +660,7 @@ body {
 }
 
 @media (min-width: 1107px) {
-  .row-last__pay-list {
+  .sections-menu__list {
     column-gap: 40px;
   }
 
@@ -641,12 +671,19 @@ body {
 /* !---------------------------------- */
 
 @media (any-hover: hover) {
-  .list-pay__item:hover {
+  .sections-menu__link:hover {
     color: #ffbc57;
   }
+  .sections-menu__link--star:hover::before {
+    transform: rotate(-100deg);
+  }
 
-  .list-pay__item:hover > .list-pay__link::before {
-    transform: scale(1.1);
+  .sections-menu__link--sale:hover::before {
+    transform: rotate(-100deg);
+  }
+
+  .sections-menu__link--part:hover::before {
+    transform: rotate(-100deg);
   }
 }
 
