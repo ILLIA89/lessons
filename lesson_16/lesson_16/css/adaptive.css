@@ -47,15 +47,15 @@ body {
 
 /* ?---mobile */
 
-@media (min-width: 0px) {
+/* @media (min-width: 0px) {
   .top-header {
     display: none;
   }
-}
+} */
 
 /* ?---laptop-PC */
 
-@media (min-width: 1024px) {
+@media (min-width: 0) {
   /* ! */
   .top-header {
     display: block;
@@ -260,7 +260,7 @@ body {
   .body-header__container {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     column-gap: 15px;
     row-gap: 5px;
   }
@@ -602,44 +602,19 @@ body {
 
 /* ?---mobile */
 
-@media (max-width: 1023px) {
-  .header__bottom {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    padding-top: 130px;
-  }
-
-  .bottom-header__container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .sections-menu__list,
-  .use-menu__list {
-    color: #535353;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 126.315789%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sections-menu__list,
-  .use-menu__list {
-    font-size: 19px;
-  }
-}
 @media (min-width: 0px) {
   .sections-menu__link {
     display: flex;
     align-items: center;
     gap: 5px;
     transition: all 0.3s ease;
+  }
+
+  .sections-menu__link,
+  .use-menu__link {
+    color: #535353;
+    font-weight: 600;
+    line-height: 126.315789%;
   }
 
   .sections-menu__link--star::before {
@@ -673,6 +648,73 @@ body {
   }
 }
 
+@media (max-width: 1023.98px) {
+  /* !! ----- burger-menu */
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-self: flex-start; */
+    /* align-self: flex-end; */
+    /* align-content: flex-start; */
+    row-gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* ?можливість скролінгу */
+    overflow: auto;
+    padding-top: 180px;
+    background-color: white;
+  }
+
+  /* ?прокладка робиться для того щоб при скролінгу меню заїжало під шапку */
+
+  .header__bottom::before {
+    /* ? прокладка */
+
+    content: '';
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background-color: white;
+  }
+
+  /* .top-header__container {
+    flex-direction: column;
+    column-gap: 40px;
+    align-items: flex-start;
+  } */
+
+  .bottom-header__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 35px;
+  }
+
+  .sections-menu__link,
+  .use-menu__link {
+    font-size: 27px;
+  }
+
+  .nav-top-header,
+  .social-top-header__label {
+    display: none;
+  }
+
+  /* ? роздвигаємо  соцмережі і мову */
+  .top-header__action {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}
+
 /* ?---laptop-PC */
 
 @media (min-width: 1024px) {
@@ -686,6 +728,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
     column-gap: 10px;
+  }
+
+  .sections-menu__link,
+  .use-menu__link {
+    font-size: 19px;
   }
 
   .sections-menu__list {
@@ -705,10 +752,7 @@ body {
 }
 
 @media (min-width: 1107px) {
-  .sections-menu__list {
-    column-gap: 40px;
-  }
-
+  .sections-menu__list,
   .use-menu__list {
     column-gap: 40px;
   }
@@ -731,6 +775,8 @@ body {
     transform: rotate(-100deg);
   }
 }
+
+/* ?????????????????????????????????????????????????????? */
 
 /* !---------------- main-page --------------------- */
 
