@@ -45,18 +45,9 @@ body {
 
 /* !--------------- top-header ------------------- */
 
-/* ?---mobile */
-
-/* @media (min-width: 0px) {
-  .top-header {
-    display: none;
-  }
-} */
-
 /* ?---laptop-PC */
 
 @media (min-width: 0) {
-  /* ! */
   .top-header {
     display: block;
     font-size: 16px;
@@ -67,12 +58,11 @@ body {
 
   .top-header__container {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
     column-gap: 10px;
     flex-wrap: wrap;
   }
-
-  /* ! */
 
   .nav-top-header {
     display: flex;
@@ -236,7 +226,7 @@ body {
 
 /* ? Mobile------ */
 
-@media (min-width: 0px) and (max-width: 1170px) {
+@media (min-width: 1023.98px) and (max-width: 1170px) {
   .body-header__logo {
     position: relative;
     z-index: 2;
@@ -252,8 +242,21 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .body-header__logo {
+    width: 140px;
+  }
+  .body-header__logo img {
+    width: 150px;
+  }
+}
+
 @media (min-width: 0px) {
   /* !geometry and base styles */
+
+  .body-header__logo {
+    z-index: 2;
+  }
 
   .body-header {
     padding: 10px 0 10px 0;
@@ -265,9 +268,14 @@ body {
   .body-header__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 15px;
     row-gap: 5px;
+  }
+
+  .body-header:not(:last-child) {
+    border-bottom: 2px solid #f8f8f8;
   }
 
   /* ! ----- btn ----- */
@@ -279,7 +287,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    max-width: 145px;
+    /* max-width: 145px; */
 
     text-align: center;
 
@@ -405,23 +413,26 @@ body {
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: black;
+    transition: all 0.3s;
 
-    transition: all 0.3 s;
+    background-color: black;
   }
 
   .menu-icon::before {
     content: '';
+
     top: 0;
   }
 
   .menu-icon::after {
     content: '';
+
     bottom: 0;
   }
 
   .menu-icon span {
     top: 50%;
+    transition: all 0.3 s;
     transform: translate(0px, -50%);
   }
   /* ? анімація хрестика відбувається підчас додаванням js класу .menu-open */
@@ -429,25 +440,20 @@ body {
     transform: rotate(-45deg);
     top: 50%;
     margin-top: -1px;
+    transition: all 0.3 s;
   }
 
   .menu-open .menu-icon::after {
     transform: rotate(45deg);
     bottom: 50%;
     margin-bottom: -1px;
+    transition: all 0.3 s;
   }
 
   .menu-open .menu-icon span {
     transform: scale(0);
+    transition: all 0.3 s;
   }
-}
-
-@media (min-width: 480px) {
-  /* !!!!!!!!!!!! */
-}
-
-@media (min-width: 768px) {
-  /* !!!!!!!!!!!! */
 }
 
 /* ? PC----- */
@@ -455,10 +461,6 @@ body {
 @media (min-width: 1024px) {
   .body-header {
     padding: 25px 0;
-  }
-
-  .body-header:not(:last-child) {
-    border-bottom: 2px solid #f8f8f8;
   }
 
   .body-header__container {
@@ -515,10 +517,6 @@ body {
     margin-bottom: 5px;
   }
 
-  .contacts-body-header__phones {
-  }
-  .phones-contacts-header {
-  }
   .phones-contacts-header__main {
     font-size: 20px;
     font-weight: 600;
@@ -539,8 +537,6 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 8px;
-  }
-  .phones-contacts-header__item {
   }
 
   .phones-contacts-header__item:not(:last-child) {
@@ -674,9 +670,13 @@ body {
 @media (max-width: 1023.98px) {
   /* !! ----- burger-menu */
 
-  .header__burger {
-    /* display: none; */
+  .burger-header__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
 
+  .header__burger {
     position: fixed;
     top: 0;
     left: -100%;
@@ -687,7 +687,7 @@ body {
     /* ?можливість скролінгу */
     overflow: auto;
 
-    padding-top: 134px;
+    padding-top: 144px;
     padding-bottom: 30px;
     background-color: white;
 
@@ -733,9 +733,11 @@ body {
   }
 
   /* ! відступ від списків меню*/
-  .bottom-header__container:not(:last-child) {
+  /* ? Зроблені через gap */
+
+  /* .bottom-header__container:not(:last-child) {
     margin-bottom: 40px;
-  }
+  } */
 
   .sections-menu__link,
   .use-menu__link {
@@ -752,9 +754,40 @@ body {
     align-self: stretch;
     justify-content: space-between;
   }
+
+  /* !  ------- btn */
+
+  .body-header__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 784.99px) {
+  /* !! ----- burger-menu */
+
+  .bottom-header {
+    padding-top: 10px;
+  }
+
+  .bottom-header__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 785px) and (max-width: 1023.98px) {
+  /* !! ----- burger-menu */
+
+  .header__burger {
+    padding-top: 85px;
+  }
 }
 
 /* ?---laptop-PC */
+
+@media (min-width: 0px) {
+}
 
 @media (min-width: 1024px) {
   .bottom-header {
