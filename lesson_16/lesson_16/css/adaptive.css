@@ -127,6 +127,8 @@ body {
 
   .social-top-header__link > img {
     transition: all 0.4s;
+    width: 17px;
+    height: 17px;
   }
 
   .social-top-header__link--whatsapp {
@@ -366,6 +368,11 @@ body {
     transition: all 0.4s ease;
   }
 
+  .contacts-body-header__icon > img {
+    width: 23px;
+    height: 23px;
+  }
+
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
   .body-header__actions {
@@ -391,6 +398,8 @@ body {
 
   .body-header__actions-link > img {
     transition: all 0.4s;
+    width: 25px;
+    height: 25px;
   }
 
   /* !-----burger + анімація хрестика */
@@ -431,7 +440,7 @@ body {
 
   .menu-icon span {
     top: 50%;
-    transition: all 0.3 s;
+    transition: all 0.3s;
     transform: translate(0px, -50%);
   }
   /* ? анімація хрестика відбувається підчас додаванням js класу .menu-open */
@@ -439,19 +448,19 @@ body {
     transform: rotate(-45deg);
     top: 50%;
     margin-top: -1px;
-    transition: all 0.3 s;
+    transition: all 0.3s;
   }
 
   .menu-open .menu-icon::after {
     transform: rotate(45deg);
     bottom: 50%;
     margin-bottom: -1px;
-    transition: all 0.3 s;
+    transition: all 0.3s;
   }
 
   .menu-open .menu-icon span {
     transform: scale(0);
-    transition: all 0.3 s;
+    transition: all 0.3s;
   }
 }
 
@@ -801,8 +810,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 10px;
+    flex-wrap: no-wrap;
+    column-gap: 20px;
   }
 
   .sections-menu__link,
@@ -812,17 +821,19 @@ body {
 
   .sections-menu__list {
     display: flex;
+
     flex-wrap: wrap;
     flex-grow: 1;
     column-gap: 20px;
-    row-gap: 5px;
+    row-gap: 10px;
   }
 
   .use-menu__list {
     display: flex;
+    justify-self: end;
     flex-wrap: wrap;
     column-gap: 20px;
-    row-gap: 5px;
+    row-gap: 10px;
   }
 }
 
