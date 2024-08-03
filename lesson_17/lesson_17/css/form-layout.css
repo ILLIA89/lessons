@@ -1,0 +1,466 @@
+@import url('fonts.css');
+@import url('reset.css');
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  color: #2b2929;
+  background-color: #f8f8f8;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.order {
+  padding: 30px 0 40px 0;
+}
+.order__container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.order__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%; /* 48/40 */
+}
+
+.order__title:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.order__form {
+  max-width: 740px;
+}
+.form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+}
+
+/* !------інформація про покупця-------- */
+
+.form__box {
+  position: relative;
+}
+
+/* !---- form__line не даю на останній елемент */
+
+.form__line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+
+.label-titel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title {
+  color: #2b2929;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 130.769231%; /* 34/26 */
+}
+
+.wrapp__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+.wrapp__inputs:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.wrapp__input-line {
+  flex-basis: 325px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.wrapp__input-line:last-child {
+  flex-grow: 0;
+}
+
+.wrapp__input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: 1px solid #d1d5d5;
+  background: #fff;
+  transition: all 0.5s ease;
+}
+
+.wrapp__input::placeholder {
+  color: #535353;
+  line-height: 187.5%; /* 30/16 */
+}
+
+.checkbox__label {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 187.5%; /* 30/16 */
+  color: #535353;
+}
+
+.checkbox__input:focus-visible + .checkbox__text {
+  outline: 1px solid #ffbc57;
+  outline-offset: 4px;
+}
+
+.wrapp__input:focus {
+  outline: 1px solid #ffbc57;
+}
+
+.wrapp__input:focus::placeholder {
+  color: #ffbc57;
+}
+
+.checkbox__text::before {
+  content: '';
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5d5;
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+  background: url('../img/krovato/form/checked.svg') center / cover no-repeat,
+    #ffbc57;
+}
+
+/* !--------------- */
+
+/* ! -------------delivery-------------- */
+.delivery-choice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.delivery-choice__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 210px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 20px 10px;
+
+  cursor: pointer;
+  transition: all 0.4s ease;
+  outline: 3px solid #f8f8f8;
+  border-radius: 8px;
+}
+
+.delivery-choice__label > img {
+  max-width: 40px;
+}
+
+.delivery-choice__label > img:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.delivery-choice__label:focus {
+  outline: 3px solid #ffbc57;
+}
+
+.delivery-choice__label:hover {
+  transition: all 0.4s ease;
+
+  box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+}
+
+.delivery-choice__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.delivery-choice__label::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  opacity: 0;
+  z-index: 3;
+  transform: translate(-50%);
+  width: 40px;
+  height: 40px;
+  background: url('../img/krovato/form/check-circle.svg') center / cover
+    no-repeat;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label {
+  outline: 3px solid #ffbc57;
+  border: transparent;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label::before {
+  opacity: 1;
+}
+
+.delivery-choice__input:checked + .delivery-choice__label > img {
+  opacity: 0;
+}
+
+.delivery-choice__input:focus-visible:checked + .delivery-choice__label {
+  outline: 3px solid #ffbc57;
+  border: transparent;
+}
+
+.delivery-choice__text-1 {
+  text-align: center;
+  color: inherit;
+  line-height: 187.5%; /* 30/16 */
+}
+
+.delivery-choice__text-2 {
+  color: #535353;
+  font-size: 15px;
+  line-height: 146.666667%; /* 22/15 */
+}
+
+/* ! ----------------- */
+
+/* ! ------------------------location------------------ */
+
+.location {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+.location__adress {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  align-items: center;
+}
+.location__text-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  flex-grow: 1;
+}
+
+.location__text-box > span:first-child {
+  line-height: 187.5%; /* 30/16 */
+}
+
+.location__text-box > span:nth-child(2n) {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%; /* 28/20 */
+  color: #2b2929;
+}
+
+.location__img-wrap {
+  flex-basis: 40px;
+}
+
+.location__img-wrap > img {
+  max-width: 40px;
+}
+
+.btn {
+  min-width: 142px;
+  padding: 13px 20px;
+  border-radius: 8px;
+  background-color: #ffbc57;
+  transition: all 0.4s ease;
+}
+
+.btn:focus,
+.btn:hover {
+  transition: all 0.4s ease;
+  background-color: #ef940b;
+}
+
+.btn > span {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 126.315789%; /* 24/19 */
+}
+
+.btn > span::before {
+  content: '';
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background: url('../img/krovato/form/btn-map.svg') center / contain no-repeat;
+}
+
+/* ! --------------pay------------------ */
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.pay__radio {
+  position: relative;
+  cursor: pointer;
+}
+.radio__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.radio__text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 17px;
+  line-height: 141.176471%; /* 24/17 */
+}
+
+.radio__text::before {
+  content: '';
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #b1b1b1;
+  transition: all 0.3s;
+}
+
+.radio__input:focus-visible + .radio__text {
+  outline: 1px solid #ffbc57;
+  outline-offset: 4px;
+}
+
+.radio__input:checked + .radio__text::before {
+  background: url('../img/krovato/form/checked.svg') center / cover no-repeat,
+    #ffbc57;
+}
+
+.radio:nth-child(2) > .radio__text::after {
+  content: '';
+  width: 106px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/master-visa-icon.svg') center / contain
+    no-repeat;
+}
+
+.radio:nth-child(3) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/privat-pay-logo.svg') center / contain
+    no-repeat;
+}
+
+.radio:nth-child(5) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/privaty-credit-logo.svg') center /
+    contain no-repeat;
+}
+
+.radio:nth-child(6) > .radio__text::after {
+  content: '';
+  width: 48px;
+  height: 32px;
+  flex-shrink: 0;
+  background: url('../img/krovato/form/mono-bank-logo.svg') center / contain
+    no-repeat;
+}
+
+/* !---------------------- */
+
+/* !--------------------comments--------------- */
+
+.comments__textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 187.5%; /* 30/16 */
+  padding: 10px 20px;
+  border-radius: 8px;
+  resize: vertical;
+  background-color: #ffffff;
+  outline: 1px solid #d1d5d5;
+}
+
+.comments__textarea::placeholder {
+  color: #535353;
+  line-height: 187.5%; /* 30/16 */
+}
+
+.comments__textarea:focus {
+  outline: 1px solid #ffbc57;
+}
+
+.comments__textarea:focus::placeholder {
+  color: #ffbc57;
+}
+
+.wrapp__btn-comments {
+  align-self: center;
+}
+
+.btn--with-padding {
+  max-width: 460px;
+  padding: 8px 30px;
+}
+
+.btn--with-padding > span {
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.btn--with-padding > span::before {
+  content: '';
+  display: none;
+}
