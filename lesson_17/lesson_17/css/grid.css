@@ -1,0 +1,9 @@
+/* !Локальне підключення */
+@import url('fonts.css');
+
+@import url('reset.css');
+
+body {
+  /* font-family: 'FONTSPRING DEMO - Integral CF', sans-serif; */
+  font-family: 'Satoshi', sans-serif;
+}
