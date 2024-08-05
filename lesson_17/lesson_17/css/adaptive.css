@@ -871,7 +871,7 @@ body {
 .popular {
   font-size: 20px;
   font-weight: 600;
-  line-height: 140%; /* 28/20 */
+  line-height: 140%;
   color: #2b2929;
   background-color: #f8f8f8;
 
@@ -882,74 +882,50 @@ body {
   margin-bottom: 40px;
 }
 
-/* ! flex-container */
+/* ! Grid-container */
 .card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
   column-gap: 10px;
   row-gap: 24px;
-
-  flex-grow: 1;
 }
 
-/* ! flex-item */
+/* ! Grid-item */
 
 .card__item {
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  flex-basis: 250px;
-  flex-grow: 1;
-
   transition: all 0.5s ease;
-
   box-shadow: 10px 10px 18px -18px rgba(66, 68, 90, 1);
-}
 
-.card__item:last-child {
-  flex-grow: 0;
-}
-
-.card__item:hover {
-  box-shadow: 10px 10px 18px -18px rgb(245, 189, 77);
-  transition: all 0.5s ease;
-}
-
-.item-card {
   border-radius: 8px;
   background-color: #fff;
   overflow: hidden;
 }
 
 .item-card__link {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   justify-content: space-between;
-
-  position: relative;
 
   transition: all 0.5s ease;
 }
 
 .item-card__link::before {
   content: '';
-  width: 294px;
-  height: 280px;
+  width: 100%;
+  height: 100%;
   background-color: #efefef;
-  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
 
   position: absolute;
-  top: 147px;
-  right: -27px;
+  top: 144px;
+  right: 0px;
   z-index: 1;
 
-  transition: all 0.5s ease;
-}
-
-.item-card__link:hover::before {
-  background-color: #d9d9d9;
   transition: all 0.5s ease;
 }
 
@@ -967,7 +943,7 @@ body {
 .item-card__wrap > h3 {
   font-size: 20px;
   font-weight: 600;
-  line-height: 140%; /* 28/20 */
+  line-height: 140%;
   color: #2b2929;
 }
 
@@ -975,7 +951,7 @@ body {
   display: inline-block;
   font-size: 20px;
   font-weight: 600;
-  line-height: 140%; /* 28/20 */
+  line-height: 140%;
   color: #b1b1b1;
 }
 .item-card__img-wrap {
@@ -986,15 +962,32 @@ body {
   padding: 0 20px 20px 20px;
 }
 
-.item-card__img-wrap > img {
-  max-width: 250px;
+.item-card__img-wrap > img:first-child {
+  aspect-ratio: 250 / 300;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .item-card__icon {
   position: absolute;
+  width: 50px;
+  height: 50px;
   right: 20px;
   bottom: 20px;
   z-index: 3;
+}
+
+@media (any-hover: hover) {
+  .card__item:hover {
+    box-shadow: 10px 10px 18px -18px rgb(245, 189, 77);
+    transition: all 0.5s ease;
+  }
+
+  .item-card__link:hover::before {
+    background-color: #d9d9d9;
+    transition: all 0.5s ease;
+  }
 }
 
 /* ?------------------------------------------------------------- */
