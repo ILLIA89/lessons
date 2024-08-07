@@ -1178,11 +1178,6 @@ body {
   transition: all 0.5s ease;
 }
 
-.promotions__link:hover {
-  color: #ef940b;
-  transition: all 0.5s ease;
-}
-
 .promotions__link::after {
   content: '';
   width: 24px;
@@ -1192,11 +1187,6 @@ body {
   transition: all 0.5s ease;
 
   background: url('../img/krovato/arrow.svg') 100% 100% / cover no-repeat;
-}
-
-.promotions__link:hover::after {
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
 }
 
 .promotions__btn-wrap {
@@ -1209,11 +1199,6 @@ body {
   transition: all 0.5s ease;
 }
 
-.btn-promotions__link:hover > img {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
-}
-
 .promotions__nawigate-box {
   display: flex;
   flex-wrap: wrap;
@@ -1221,9 +1206,8 @@ body {
 }
 
 .promotions__list {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
   column-gap: 30px;
   row-gap: 10px;
 }
@@ -1243,12 +1227,32 @@ body {
 }
 
 .promotions__item-link > img {
-  max-width: 410px;
+  aspect-ratio: 410 / 280;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transform: scale(1);
   transition: all 0.5s ease;
 }
 
-.promotions__item-link:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
+@media (any-hover: hover) {
+  .promotions__link:hover {
+    color: #ef940b;
+    transition: all 0.5s ease;
+  }
+
+  .promotions__link:hover::after {
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+  }
+
+  .btn-promotions__link:hover > img {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+  }
+
+  .promotions__item-link:hover > img {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+  }
 }
