@@ -810,7 +810,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     column-gap: 20px;
   }
 
@@ -1008,12 +1008,22 @@ body {
   background-color: #f8f8f8;
 }
 
+@media (min-width: 0px) and (max-width: 578.99px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+  }
+}
+
 /* ! Grid-container */
-.card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 30px;
+@media (min-width: 579px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 30px;
+  }
 }
 
 /* ! Grid-елемент і Flex-container одночасно */
@@ -1039,11 +1049,17 @@ body {
   overflow: hidden;
 }
 
-.card-list__img-wrap > img {
+.card-list__img-wrap {
+  /* ! варто вказувати bg-color,
+  ! тоді при відсутності картинки, пусте місце виглядає більш естетичніше*/
+
+  background-color: #d9d9d9;
+
+  /* ! при проблемі з картинкою текст в картці повинен залишатись на своєму
+  ! місці а не підійматись вгору, для цього aspect-ratio: 260 / 220; краще 
+  ! вказати для обгортки card-list__img-wrap а не для самої картинки */
+
   aspect-ratio: 260 / 220;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .card-list__text-wrap {
@@ -1053,16 +1069,29 @@ body {
   flex-grow: 1;
 }
 
+.card-list__img-wrap > img {
+  transition: all 0.4s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .card-list__text-wrap > span:first-child {
   flex-grow: 1;
 }
 
 .card-list__text-wrap > h3 {
+  flex-grow: 1;
+}
+
+.card-list__text-wrap > h3 a {
+  display: inline;
   font-size: 19px;
   font-weight: 600;
   line-height: 126.315789%;
   color: #2b2929;
-  flex-grow: 1;
+
+  transition: all 0.4s;
 }
 
 .card-list__text-wrap > span:last-child {
@@ -1116,7 +1145,7 @@ body {
   column-gap: 10px;
 }
 
-.wrap-favourite__actions-link {
+.wrap-favourite__actions-btn {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -1129,7 +1158,7 @@ body {
   transition: all 0.4s;
 }
 
-.wrap-favourite__actions-link > img {
+.wrap-favourite__actions-btn > img {
   transition: all 0.4s;
   width: 25px;
   height: 25px;
@@ -1141,11 +1170,19 @@ body {
     transition: all 0.5s ease;
   }
 
-  .wrap-favourite__actions-link:hover {
+  .card-list__img-wrap:hover > img {
+    transform: scale(1.1);
+  }
+
+  .card-list__text-wrap > h3 a:hover {
+    color: #ffbc57;
+  }
+
+  .wrap-favourite__actions-btn:hover {
     background-color: #ffbc57;
   }
 
-  .wrap-favourite__actions-link:hover > img {
+  .wrap-favourite__actions-btn:hover > img {
     transform: scale(1.1);
   }
 }

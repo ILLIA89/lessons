@@ -20,12 +20,14 @@ body {
 
 .header {
   font-family: 'FONTSPRING DEMO - Integral CF', sans-serif;
-  font-size: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .footer {
   font-family: 'FONTSPRING DEMO - Integral CF', sans-serif;
-  font-size: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 [class*='__container'] {
@@ -43,13 +45,19 @@ body {
 .fashion__container {
 }
 
-.fashion__body-item {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 @media (min-width: 0px) {
+  .fashion__body-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .fashion__body-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   .fashion__text {
     position: absolute;
     top: 25px;
@@ -102,8 +110,7 @@ body {
     background-color: #f0f0f0;
   }
 
-  .fashion__body-item > img {
-    /* ! пропорція квадрат */
+  .fashion__body-link > img {
     aspect-ratio: 310 / 190;
     width: 100%;
     height: 100%;
@@ -145,7 +152,7 @@ body {
     background-color: #f0f0f0;
   }
 
-  .fashion__body-item > img {
+  .fashion__body-link > img {
     /* ! пропорція квадрат */
     aspect-ratio: 1 / 1;
     width: 100%;
