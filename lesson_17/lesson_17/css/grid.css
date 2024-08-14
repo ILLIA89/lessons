@@ -46,22 +46,23 @@ body {
 }
 
 @media (min-width: 0px) {
-  .fashion__body-item {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
   .fashion__body-link {
     display: block;
     width: 100%;
     height: 100%;
   }
 
+  .fashion__body-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgb(180, 183, 186);
+  }
+
   .fashion__text {
     position: absolute;
     top: 25px;
-    left: 36px;
+    left: 25px;
     color: #000;
     font-style: normal;
     font-weight: 700;
@@ -77,7 +78,7 @@ body {
 }
 @media (min-width: 0px) and (max-width: 519.99px) {
   .fashion__text {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .fashion__title {
@@ -91,6 +92,8 @@ body {
 
 @media (min-width: 520px) {
   .fashion__text {
+    top: 25px;
+    left: 36px;
     font-size: 36px;
   }
 
@@ -202,4 +205,11 @@ body {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
   } */
+}
+
+@media (any-hover: hover) {
+  .fashion__body-item:hover {
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    transition: all 0.5s ease;
+  }
 }
