@@ -1,0 +1,922 @@
+@import url('fonts.css');
+@import url('reset.css');
+@import url('animation.css');
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: rgb(168, 218, 126);
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+}
+
+.header {
+  background-color: rgb(216, 224, 210);
+
+  animation-name: header-background-color;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.header__container {
+  position: relative;
+  max-width: 1320px;
+  padding-inline: 15px;
+  margin: 0 auto;
+  overflow: visible;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header__wrap {
+  display: inline-block;
+  padding: 25px 25px 75px 25px;
+}
+
+.header__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  color: #2b2929;
+  width: 100%;
+  opacity: 0;
+  /* !-----animation----- */
+  animation-name: translate-block-x, text-color;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* ?-----------------------------animation page-------------------------- */
+
+.page__decor {
+  position: relative;
+}
+
+/* !!!!!SUN!!!!! */
+
+.line__sun {
+  width: 100%;
+  border-top: 5px solid yellow;
+}
+
+.sun__item {
+  position: absolute;
+  top: -2px;
+  height: 92%;
+  width: 33.333%;
+
+  transform-origin: top;
+  animation-name: fluctuations;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  /* ! поєднання  infinite і alternate, робить ефект маятника*/
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.sun__item:nth-child(2) {
+  left: 250px;
+  height: 80%;
+}
+
+.sun__item:nth-child(3) {
+  left: 500px;
+  height: 87%;
+}
+.sun__item:nth-child(4) {
+  left: 750px;
+  height: 74%;
+}
+
+.sun__item:nth-child(5) {
+  left: 1000px;
+}
+
+.sun__item:nth-child(6) {
+  left: 1250px;
+  height: 80%;
+}
+
+.sun__item:nth-child(7) {
+  left: 1500px;
+}
+
+.sun__item:nth-child(8) {
+  left: 1750px;
+  height: 77%;
+}
+
+.sun__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 9px;
+  height: 88%;
+  border: 3px solid black;
+  background-color: #fff201;
+}
+
+.sun__item::after {
+  content: '';
+  position: absolute;
+  bottom: 190px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-color: #fff201;
+}
+
+/* .page__sun-1 {
+  animation-name: fluctuations;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+} */
+
+/* .page__sun-line {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 2px;
+  height: 2200px;
+  background-color: #fff201;
+  transform: rotateZ(1deg);
+  transform-origin: top;
+  animation-name: fluctuations-1;
+  animation-duration: 4s;
+  animation-duration: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+} */
+
+/* .page__sun {
+  position: absolute;
+  bottom: 395px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff201;
+} */
+
+/* .page__ray-1 {
+  position: absolute;
+  z-index: 100;
+  top: -60%;
+  left: 30%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-10deg);
+
+  background-color: #fff201;
+}
+
+.page__ray-2 {
+  position: absolute;
+  z-index: 100;
+  top: 110%;
+  left: 60%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-10deg);
+
+  background-color: #fff201;
+}
+
+.page__ray-3 {
+  position: absolute;
+  z-index: 100;
+  top: -26%;
+  left: 115%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-128deg);
+
+  background-color: #fff201;
+}
+
+.page__ray-4 {
+  position: absolute;
+  z-index: 100;
+  top: 70%;
+  left: -26%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-126deg);
+
+  background-color: #fff201;
+}
+
+.page__ray-5 {
+  position: absolute;
+  z-index: 100;
+  top: -18%;
+  left: -33%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-63deg);
+  background-color: #fff201;
+}
+
+.page__ray-6 {
+  position: absolute;
+  z-index: 100;
+  top: 60%;
+  left: 130%;
+  width: 10px;
+  height: 100px;
+  transform: rotate(-63deg);
+  background-color: #fff201;
+} */
+
+/* !!!!!CLOUD!!!!!! */
+
+.page__cloud-1 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 120px;
+}
+
+.page__cloud-2 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 370px;
+}
+
+.page__cloud-3 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 620px;
+}
+
+.page__cloud-4 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 870px;
+}
+
+.page__cloud-5 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 1120px;
+}
+
+.page__cloud-6 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 1370px;
+}
+
+.page__cloud-7 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 1620px;
+}
+
+.page__cloud-8 {
+  position: absolute;
+  z-index: 50;
+  top: -170px;
+  left: 1870px;
+}
+
+.page__cloud-item-1 {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(0, 166, 255);
+}
+
+.page__cloud-item-2 {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(133, 212, 255);
+}
+
+.page__cloud-item-3 {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(104, 195, 245);
+}
+
+.page__cloud-item-4 {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(89, 170, 214);
+}
+
+.page__cloud-item-5 {
+  position: absolute;
+  top: 150px;
+  left: 110px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(47, 154, 211);
+}
+
+.page__cloud-item-6 {
+  position: absolute;
+  top: 130px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(0, 166, 255);
+}
+
+/* ?--------------------------end----------------------- */
+
+.page__container {
+  max-width: 1320px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+.page__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  color: #2b2929;
+  padding-top: 150px;
+  margin-bottom: 50px;
+
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  color: #2b2929;
+  width: 100%;
+  opacity: 0;
+  /* !-----animation----- */
+  animation-name: translate-block-x, text-color;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.page__2d-block {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(216, 224, 210);
+}
+
+.page__2d-block:not(last-child) {
+  margin: 0 35px 25px 0;
+}
+
+.page__2d-item {
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: #7a956b;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  transition: all 0.9s;
+}
+/* !--------- */
+.page__2d-block:nth-child(4n + 1) {
+  opacity: 0;
+  animation-name: column;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.page__2d-block:nth-child(4n + 2) {
+  opacity: 0;
+  animation-name: column;
+  animation-duration: 3s;
+  animation-delay: 1.9s;
+  animation-fill-mode: forwards;
+}
+
+.page__2d-block:nth-child(4n + 3) {
+  opacity: 0;
+  animation-name: column;
+  animation-duration: 3s;
+  animation-delay: 2.9s;
+  animation-fill-mode: forwards;
+}
+.page__2d-block:nth-child(4n + 4) {
+  opacity: 0;
+  animation-name: column;
+  animation-duration: 3s;
+  animation-delay: 3.9s;
+  animation-fill-mode: forwards;
+}
+
+/* !------and-------- */
+
+.page__2d-block:first-child:hover > .page__2d-item {
+  transform: translate(15px, 15px);
+}
+
+.page__2d-block:nth-child(2):hover > .page__2d-item {
+  transform: translate(15px, -15px);
+}
+
+.page__2d-block:nth-child(3):hover > .page__2d-item {
+  transform: translateY(15px);
+}
+
+.page__2d-block:nth-child(4):hover > .page__2d-item {
+  transform: translateX(15px);
+}
+
+.page__2d-block:nth-child(5):hover > .page__2d-item {
+  transform: scale(1.1);
+}
+.page__2d-block:nth-child(6):hover > .page__2d-item {
+  transform: scale(0.9);
+}
+.page__2d-block:nth-child(7):hover > .page__2d-item {
+  transform: scale(0.9, 0.7);
+}
+.page__2d-block:nth-child(8):hover > .page__2d-item {
+  transform: rotate(30deg);
+}
+.page__2d-block:nth-child(9):hover > .page__2d-item {
+  transform: rotate(-30deg);
+}
+.page__2d-block:nth-child(10):hover > .page__2d-item {
+  transform: skew(10deg, 15deg);
+}
+.page__2d-block:nth-child(11):hover > .page__2d-item {
+  transform: skew(-15deg, 0);
+}
+
+.page__2d-block:nth-child(12):hover > .page__2d-item {
+  transform: translate(20px, 20px) scale(1.1) rotate(15deg) skew(10deg, 10deg);
+}
+.page__2d-block:nth-child(13):hover > .page__2d-item {
+  transform-origin: bottom right;
+  transform: rotate(-15deg);
+}
+
+/* !--------------3D--------------------*/
+.page__3d-list {
+  margin-bottom: 50px;
+}
+
+.page__3d-block {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(216, 224, 210, 0.347);
+  /* !на скільки близько об'єкт до нас знаходиться perspective: 600px;
+  ! підганяємо візуально під нашу ситуацію */
+  perspective: 600px;
+  transform-style: preserve-3d;
+}
+
+.page__3d-block:not(last-child) {
+  margin: 0 35px 25px 0;
+}
+
+.page__3d-item {
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: #7a956b;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  transition: all 0.9s;
+}
+
+/* !-----animation---- */
+
+.page__3d-block:first-child {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.page__3d-block:nth-child(2) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.page__3d-block:nth-child(3) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.page__3d-block:nth-child(4) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+.page__3d-block:nth-child(5) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+.page__3d-block:nth-child(6) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.page__3d-block:nth-child(7) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
+
+.page__3d-block:nth-child(8) {
+  opacity: 0;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+
+/* !-----and------ */
+.page__3d-block:first-child:hover > .page__3d-item {
+  transform: translate3d(30px, 15px, 15px);
+}
+
+.page__3d-block:nth-child(2):hover > .page__3d-item {
+  transform: scale3d(-1.1, -1.2, -1.1);
+}
+.page__3d-block:nth-child(3):hover > .page__3d-item {
+  transform: rotate3d(2, -1, 1, 40deg);
+}
+
+.page__3d-block:nth-child(4):hover > .page__3d-item {
+  transform: rotate3d(1, 1, 1, -40deg);
+}
+.page__3d-block:nth-child(5):hover > .page__3d-item {
+  transform: rotateY(40deg);
+}
+.page__3d-block:nth-child(6):hover > .page__3d-item {
+  transform: rotateX(-40deg);
+}
+
+.page__3d-block:nth-child(7):hover > .page__3d-item {
+  backface-visibility: hidden;
+  transform: rotateY(80deg);
+}
+
+.page__3d-block:nth-child(8):hover > .page__3d-item {
+  /* backface-visibility: hidden; */
+  transform: rotateY(360deg);
+}
+
+/* !----Flipper----- */
+
+.card__body {
+  position: relative;
+  width: 300px;
+  perspective: 800px;
+}
+.card__body img {
+  border-radius: 15px;
+  width: 100%;
+}
+.card__front,
+.card__back {
+  transition: all 0.9s;
+}
+.card__front {
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+}
+.card__back {
+  transform: rotateY(0deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card__body:hover .card__front {
+  transform: rotateX(0deg);
+}
+.card__body:hover .card__back {
+  transform: rotateX(-180deg);
+}
+
+/* !--------------------------------Car--------------------------------------------- */
+
+.car {
+  margin: 0 auto;
+  position: relative;
+  padding: 100px;
+}
+
+.car__body {
+  position: relative;
+  width: 800px;
+  height: 180px;
+  border: 3px solid black;
+  border-radius: 22% 78% 7% 93% / 100% 43% 57% 0%;
+  background-color: #7a956b;
+
+  animation-name: car;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.car__body:hover {
+  animation-play-state: paused;
+}
+
+.car__body:hover > .body-car__left-wheel,
+.car__body:hover > .body-car__righte-wheel {
+  animation-play-state: paused;
+}
+
+.car__element:nth-child(1) {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 40px;
+  height: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: red;
+}
+
+.car__element:nth-child(2) {
+  position: absolute;
+  top: 80px;
+  left: 760px;
+  width: 40px;
+  height: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: red;
+}
+
+.car__element:nth-child(3) {
+  position: absolute;
+  perspective: 300px;
+  perspective-origin: center;
+  top: 6px;
+  left: 240px;
+  width: 250px;
+  height: 164px;
+  border-radius: 0% 100% 39% 61% / 100% 36% 64% 0%;
+  border: 10px solid black;
+  background-color: #7a956b;
+}
+
+.car__element:nth-child(5) {
+  position: absolute;
+  top: -10px;
+  left: 400px;
+  width: 264px;
+  height: 26px;
+  border-radius: 48% 52% 38% 107% / 0% 0% 122% 151%;
+  border: 1px solid black;
+  background-color: #16a4eb;
+  transform: rotate(185deg);
+}
+
+.element__seat-1 {
+  position: absolute;
+  /* z-index: 2; */
+  top: 72px;
+  left: 270px;
+  width: 20px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: black;
+  transform: rotate(-16deg) skew(0, -45deg);
+}
+
+.element__seat-2 {
+  position: absolute;
+  /* z-index: 2; */
+  top: 110px;
+  left: 315px;
+  width: 20px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: black;
+  transform: rotate(90deg) skew(0, -15deg);
+}
+
+.element__seat-3 {
+  position: absolute;
+  /* z-index: 2; */
+  top: 125px;
+  left: 275px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(171, 165, 100);
+}
+
+.element__drive-1 {
+  position: absolute;
+  /* z-index: 2; */
+  top: 81px;
+  left: 424px;
+  width: 20px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: black;
+  transform: rotate(119deg);
+}
+
+.element__drive-2 {
+  position: absolute;
+  top: 64px;
+  left: 433px;
+  width: 20px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: black;
+  transform: rotate(90deg);
+}
+
+.element__drive-3 {
+  position: absolute;
+  top: 54px;
+  left: 380px;
+  width: 8px;
+  height: 79px;
+  background-color: black;
+  transform: rotate(88deg);
+}
+
+.element__drive-4 {
+  position: absolute;
+  top: 75px;
+  left: 347px;
+  width: 8px;
+  height: 39px;
+  border-radius: 5px;
+  background-color: rgb(171, 165, 100);
+  transform: rotate(350deg);
+}
+
+.element__pedal-1 {
+  position: absolute;
+  top: 145px;
+  left: 414px;
+  width: 3px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: black;
+  transform: rotate(134deg);
+}
+
+.element__pedal-2 {
+  position: absolute;
+  top: 140px;
+  left: 409px;
+  width: 3px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: rgb(171, 165, 100);
+  transform: rotate(52deg);
+}
+
+.element__door {
+  position: absolute;
+  z-index: 33;
+  top: 6px;
+  left: 240px;
+  /* ???? */
+  /* backface-visibility: hidden; */
+  width: 250px;
+  height: 164px;
+
+  border-radius: 0% 100% 39% 61% / 100% 36% 64% 0%;
+  border: 3px solid black;
+  background-color: #7a956b;
+  /* !??? */
+  /* overflow: hidden; */
+}
+
+.element__open {
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  width: 30px;
+  height: 5px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.element .element__door {
+  transition: all 1s ease 0s;
+}
+
+.element:hover > .element__door {
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+  transition: all 1s ease 0s;
+}
+
+.body-car__left-wheel {
+  position: relative;
+  top: 65px;
+  left: 65px;
+  width: 150px;
+  height: 150px;
+  background-color: #2b2929;
+  border-radius: 100%;
+  border: 3px dashed#7a956b;
+
+  animation-name: wheel;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wheel-left__element {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #7a956b;
+  border: 3px solid #2b2929;
+}
+
+.body-car__righte-wheel {
+  position: relative;
+  top: -80px;
+  left: 580px;
+  width: 150px;
+  height: 150px;
+  background-color: #2b2929;
+  border-radius: 50%;
+  border: 3px dashed#7a956b;
+
+  animation-name: wheel;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wheel-righte__element {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #7a956b;
+  border: 3px solid #2b2929;
+}

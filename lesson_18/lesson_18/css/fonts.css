@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:regular,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:regular,500,700&display=swap');
+
+/* !! Kyiv Region */
+
+@font-face {
+  font-family: 'Kyiv Region';
+  src: url('../fonts/KyivRegion-Regular.woff2') format('woff2'),
+    url('../fonts/KyivRegion-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !! Proxima Nova */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Light.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !! Quicksand */
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Medium.woff2') format('woff2'),
+    url('../fonts/Quicksand-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Bold.woff2') format('woff2'),
+    url('../fonts/Quicksand-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !! Satoshi */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('..fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('..fonts/Satoshi-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('..fonts/Satoshi-Medium.woff2') format('woff2'),
+    url('..fonts/Satoshi-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('..fonts/Satoshi-Bold.woff2') format('woff2'),
+    url('..fonts/Satoshi-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* !! Integral CF */
+
+@font-face {
+  font-family: 'FONTSPRING DEMO - Integral CF';
+  src: url('../fonts/FONTSPRINGDEMO-IntegralCFRegular.woff2') format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-IntegralCFRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FONTSPRING DEMO - Integral CF';
+  src: url('../fonts/FONTSPRINGDEMO-IntegralCFBoldRegular.woff2')
+      format('woff2'),
+    url('../fonts/FONTSPRINGDEMO-IntegralCFBoldRegular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
